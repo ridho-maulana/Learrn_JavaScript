@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+
+        <h1 id="judul">INI JUDUL</h1>
+
+        <p id="satu">Ini satu</p>
+
+        <p id="dua">INI dua</p>
+
+        <p id="tiga">INI tiga</p>
+
+    </div>
+
+    <script>
+        const container = document.querySelector("#container")
+        const satu = document.querySelector("#satu")
+        const dua = document.querySelector("#dua")
+        const tiga = document.querySelector("#tiga")
+
+        //parentNode
+        console.info(satu.parentNode)
+        //parentchild
+        console.info(dua.parentElement)
+        //childNode
+        console.info(container.childNodes);
+        //children
+        console.info(container.children)
+        //firstchild
+        console.info(container.firstChild)
+        //firstElementChild
+        console.info(container.firstElementChild)
+        //lastChild
+        console.info(container.lastChild)
+        //lastElementChild
+        console.info(container.lastElementChild)
+    </script>
+</body>
+</html>

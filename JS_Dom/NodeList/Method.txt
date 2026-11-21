@@ -1,0 +1,11 @@
+Method NodeList
+ -item(index)
+  Mengambil Node berdasarkan index
+ -forEach(callback)
+  Menjalankan fungsi untuk setiap Node dalam NodeList
+ -entries()
+  Menghasilkan iterator berisi pasangan index dan Node
+ -keys()
+  Menghasilkan iterator berisi index setiap Node
+ -values()
+  Menghasilkan iterator berisi setiap Node.

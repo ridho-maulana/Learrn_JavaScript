@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const person = {
+            Nama : "Ridho Maulana C",
+            Identitas : function(umur,tinggal){
+                document.writeln(`<p>Umur saya ${umur} tahun</p>`)
+                document.writeln(`<p>Saya tinggal di ${tinggal}</p>`);
+            }
+        }
+
+        document.writeln(person.Nama)
+        person.Identitas(12,"Bandung");
+    </script>
+</body>
+</html>

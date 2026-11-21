@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        -Array di JS bersifat dinamis,artinya
+         data bisa bertambah dengan sendirinya
+         saat kita memasukkan data ke dalam array
+        */
+        /*
+        OPERASI ARRAY
+        1.array.push(value)
+            Menambah data ke array
+        2.array.length
+            Untuk mendapatkan panjang Array
+        3.array[index]
+            Mendapatt data di posisi index
+        4.array[index] = value
+            Mengubah data di posisi index
+        5.delete array[index]
+            Menghapus data di posisi index,
+            namun index tidak bergeser
+        */
+
+        let arrayKosong = [];
+        let arrayNama = ["Ridho","Romi","Randi",true,2];     
+        
+        document.writeln(`<p>${arrayNama[4]}</p>`);
+
+        //Menambah data = nama.push("data1","data2");
+        const name = [];
+        name.push("Syu","sya"); //tambah data
+        delete name[1]; //hapus data
+        name[0] = "lala"; //ubah data
+        document.writeln(`<p>${name[0]}</p>`); //lihat data
+
+        name.push("Ridho",1,2,3,true);
+        name.push(["Oke","saya",1,"yes",false])
+        name[7].push("laalal");
+        console.info(name.length);
+        console.table(name);
+    </script>
+</body>
+</html>

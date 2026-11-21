@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--inner text-->
+    <p id="content">
+        <script>
+            console.info("Hello World");
+        </script>
+        <b>Eko</b> Kurniawan <i>Khannedy</i>
+    </p> 
+
+    <div id="konten">
+    </div>
+    <script>
+        // inner text
+        const content = document.getElementById("content");
+        console.info(content.textContent)
+        console.info(content.innerText);
+
+        //inner  HTML
+        console.info(content.innerHTML)
+        const konten = document.getElementById("konten");
+        konten.innerHTML = "<h1>This is Title</h1><P>This is Descriptiom</p>";
+        console.info(konten.innerHTML)
+
+        /*
+        Text Content dan inner Text
+         -Selain textCoontent,terdapat property lain
+          bernama innerText untuk mendapatkan isi teks sebuah
+          element
+         -Tujuan nya sama,untuk mengambil atau mengubah isi text
+          konten sebuah element,namun ada perbedaannya
+         -textContent akan mengembalikan semua isi dari konten
+          text sebuat element
+         -innerText bisa tahu,bagian text mana yang ditampilkan,
+          dan dia hanya akan mengambil text yang ditampilkan saja  
+        */
+        /*
+        Inner HTML
+         -jika Text Content dan inner Text hanya mengambil
+          text saja,Inner HTML akan mengambil seluruh element
+          HTML nya sebagai text
+         -ini juga cocok jika kita ingin mengubah isi dari
+          element menggunakan text yang berisi tag HTML
+        Mengubah Element dengan Inner HTML
+         -salah satu kemampuan dari innerHTML adalah,kita bisa
+          mengubah isi dari children sebuah element hanya
+          dengan string
+         -Tag yang terdapat di dalam String secara otomatis
+          akan menjadi child element
+        */
+    </script>
+</body>
+</html>

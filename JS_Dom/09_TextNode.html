@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Eko Kurniawan Khannedy
+    <script>
+        /*
+        Text Node
+         -Saat kita membuat HTML,kadang kita membuat
+          teks tanpa tag
+         -Saat halaman web tersebut direpresentasikan dalan DOM,
+          text tanpa tag bukanlah merupakan Element,melainkan Node
+         -Lebih tepatnya text Node
+         -https://developer.mozilla.org/en-US/docs/Web/API/Text
+
+        Membuat Text Node
+         -kita juga bisa membuat Text Node menggunakan method document.createTextNode(string)
+         -Hasilnya berupa Text yang bisa kita tambahkan ke Node lain
+        */
+
+        const text = document.body.firstChild
+        console.info(text.wholeText);
+        
+        const teks = document.createTextNode("Ridho Maulana C");
+        document.body.appendChild(teks)
+    </script>
+</body>
+</html>

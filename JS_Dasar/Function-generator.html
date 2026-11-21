@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Function Generator
+         -Function generator adalah function yang digunakan
+          untuk membuat data generator
+         -Gnerator adalah data yang bisa intarasi seperti array
+         -Untuk membuat function generator,kita perlu
+          menggunakan tanda *(bintang) setelah kata 
+          function
+         -Dan untuk mengembalikan data di setiap iterasi,
+          kita bisa gunakan kata kunci yield diikuti
+          datanya
+        */
+
+        //Kode Function Generator Sederhana
+        function* createNames(){
+            yield "Ridho";
+            yield "Maulana";
+            yield "Candra";
+        }
+        const names = createNames();
+        for (const name of names) {
+            document.writeln(name);
+        }
+
+        //Kode Function Generator Komplex
+        function* buatGanjil(value){
+            for (let i = 1; i <= value; i++){
+                if(i % 2 === 1){
+                    document.writeln(`Yield ${i}`);
+                    yield i;
+                }
+            }
+        }
+        const angkaGanjil = buatGanjil(100);
+        for(const angka of angkaGanjil){
+            document.writeln(`<p>Ganjil ${angka}</p>`)
+        }
+
+        //Lazy Generator
+        function* buatGenap(value){
+            for (let i = 1; i <= value; i++){
+                if(i % 2 === 0){
+                    document.writeln(`Yield ${i}`);
+                    yield i;
+                }
+            }
+        }
+
+        const angkaGenap = buatGenap(100);
+        document.writeln(angkaGenap.next().value);
+        document.writeln(angkaGenap.next().value);
+        document.writeln(angkaGenap.next().value);
+        document.writeln(angkaGenap.next().value);
+        document.writeln(angkaGenap.next().value);
+        document.writeln(angkaGenap.next().value);
+
+    </script>
+</body>
+</html>

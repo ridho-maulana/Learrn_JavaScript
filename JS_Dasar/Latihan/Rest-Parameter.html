@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function sum(nama,...angka){
+        //     let total = 0;
+        //     for(const ang of angka){
+        //         total += ang;
+        //     }
+        //     document.writeln(`<P>Total ${nama} = ${total}`);
+        // }
+
+        // sum("Baju",1,2,5,4)
+
+    function sum(name,...angka){
+        let total = 1;
+        for (const ang of angka) {
+            total += ang;
+        }
+        document.writeln(`Total ${name} = ${total}`)
+    }
+
+    sum("Semangka",1,2,3,4);
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="eko">EKO</div>
+    <div class="ekokurniawan">KURNIAWAN</div>
+    <div class="ekokhannedy">KHANNEDY</div>
+    <script>
+        /*
+        Attribute Selector
+         -Kita bisa menggunakan selector [attribute]
+         -Atau bisa juga untuk tertentu,misal menggunakan selector div[attribute]
+        */
+        //attribute selector
+        const element = document.querySelectorAll("[class]");
+        console.info(element);
+
+
+        /*
+        Operator di Attribute Seletor
+         -Kita juga bisa menggunakan operator pada attribute selector
+         -Misal [attribute=value],[attribute^=value] dan lain-lain
+         -tanda ^ artinya diawali
+        */
+        const list = document.querySelectorAll("div[class^=eko]");
+        console.info(list)
+    </script>
+</body>
+</html>

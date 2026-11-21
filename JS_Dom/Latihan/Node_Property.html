@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">     
+        <h1 id="judul">Belajar DOM</h1>
+        
+        <p id="satu">Paragraf Satu</p>
+        
+        <p id="dua">Paragraf Dua</p> 
+        
+        <p id="tiga">Paragraf Tiga</p>
+
+    </div>
+
+    <script>
+        const container = document.querySelector("#container")
+        const satu = document.querySelector("#satu")
+        const dua = document.querySelector("#dua")
+        const tiga = document.querySelector("#tiga")
+
+        //parentNode-->Dapat Parent Node dari Node sekarang
+        console.info(satu.parentNode);
+        //parentElement-->Dapat parent yang berupa Element
+        console.info(satu.parentElement);
+        //childNodes-->Dapat semua child Node
+        console.info(container.childNodes)
+        //children-->Dapat semua child Element
+        console.info(container.children)
+        //firstchild-->Dapat child Node pertama
+        console.info(container.firstChild)
+        //lastchild-->dapat child Node terakhir
+        console.info(container.lastChild)
+        //fistElementchild-->Dapat Element pertama dari child
+        console.info(container.firstElementChild)
+        //lastElementchild-->Dapat Element terakhir dari child
+        console.info (container.lastElementChild)
+
+        //nextSibling-->Dapat Node setelah Node sekarang
+        const duaa = document.querySelector("#dua")
+        console.info(duaa.nextSibling)
+        //nextElementSibling-->Next elemen setelahnya
+        console.info(duaa.nextElementSibling)
+    </script>
+</body>
+</html>

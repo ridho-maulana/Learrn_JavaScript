@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup-Prompt</title>
+</head>
+<body>
+    <script>
+        /*
+        Alert,Prompt,Confirm
+         -Java Script memiliki fitur bernama alert
+          ,prompt,dan confirm
+         -Alert
+           Digunakan untuk memberi peringatan berupa
+           popup text di browser
+         -Prompt
+           Digunakan untuk meminta input string dari
+           pengguna browser dalam bentuk popup input
+           text
+         -Confirm
+           Digunakan untuk meminta input boolean dari
+           pengguna browser dalam bentuk popup input
+           pilihan
+        */
+
+        //alert
+        alert("Selamat Belajar JS");
+        //prompt
+        const name = prompt("Siapa nama anda : ");
+        alert(`Hello ${name}`);
+        //conform
+        const masuk = confirm("Anda yakin mau masuk?");
+        if(masuk){
+          const name = prompt("Siapa nama anda : ");
+          alert(`Hello ${name}`);
+        }else{
+          alert("Bye bye")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <div id="container">
+        <h1 id="judul" id="oo" class="judulan">Hello Ridho</h1>
+
+        <p class="teks">Belajar JavaScript</p>
+
+        <input id="nama" type="text" value="Ridho">
+
+        <button id="tombol">Klik</button>
+    </div>
+
+    <br><br><br>
+
+    <div id="content">
+        <p>Aku</p>
+        <p>Adalah</p>
+        <p>Seorang</p>
+    </div>
+
+    <button id="tombolku">Klik Saya</button>
+
+    <script>
+        //querySelector()-->cari element dalam element
+        const container = document.querySelector("#container");
+        const judul = container.querySelector("h1");
+        const oke = container.querySelector("p");
+        console.info(judul.textContent)
+
+        //querySelectorAll()-->Mencari semua elemen dalam elemen tersebut
+        const content = document.querySelector("#content")
+        const semua_content = content.querySelectorAll("p")
+        console.info(semua_content);
+
+        //setAttribute()-->tambah atau ubah attibute
+        const container2 = document.querySelector("#container")
+        const isi_container = container.querySelector("p")
+        const ubah = isi_container.setAttribute("id","okelah");
+        console.info(document.querySelector("#container"))
+
+        //getAttribute()-->Untuk mengambil nilai attribute
+        const hasil = judul.getAttribute("class")
+        console.info(hasil)
+
+        //removeAttribute()-->menghapus attribute
+        const hapus = isi_container.removeAttribute("id")
+
+        //remove()-->hapus element itu sendiri dari halaman
+        const  doc = document.querySelector("#container")
+        const hapu = doc.querySelector("p")
+        hapu.remove();
+
+        //apppend()-->menambah sesuatu ke bagian akhir element
+        const saya = document.createElement("h1")
+        saya.textContent = "Halli oke li";
+        container.append(saya)
+
+        //prepend()-->hampir sama dengan append(),tetapu ditambahkan di awal
+        const awal = document.createElement("p")
+        awal.textContent = "Ini sang penguasa daerah";
+        content.prepend(awal); 
+
+        //addEventListener()-->membuat website interaktif
+        //Nanti
+        const tombol = document.querySelector("#tombolku");
+        tombol.addEventListener("click",function(){
+            tombol.textContent = "Sudah";
+        })
+    </script>
+</body>
+</html>

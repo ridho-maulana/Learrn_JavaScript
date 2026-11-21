@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        ///
+        function* anggota(){
+            yield "Mamah"
+            yield "Ayah"
+            yield "Ica"
+            yield "Ridho"
+            yield "Al Davi"
+        }
+
+        let anggo = anggota();
+        for (const keluarga of anggo) {
+            document.writeln(`<p>${keluarga}</p>`)
+        }
+
+        ///
+        function* bilGanjil(value){
+            for(let i = 0; i < value; i++){
+                if(i % 2 === 1){
+                    document.writeln("Angka " + i);
+                    yield i;
+                    document.writeln("<br>");
+                }
+            }
+        }
+
+        const ganjil = bilGanjil(100);
+        for (const angka of ganjil) {
+                document.writeln(angka);
+        }
+    </script>
+</body>
+</html>

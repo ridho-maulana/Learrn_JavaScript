@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        BREAK & CONTINUE
+         -Pada saat statement,kita sudah mengenal kata kunci 
+          break,yaitu untuk menghentikan case dalam switch
+         -Sama dengan perulangan,break juga digunakan untuk
+          menghentikan seluruh perulangan
+         -Namun berbeda dengan continue,continue digunakan
+          untuk menghentikan perulangan saat ini,lalu melanjutkan
+          ke perulangan selanjutnya
+        */
+
+        //BREAK
+            let angka = 0;
+            while(true){
+                document.writeln(`<p>Angka ke-${angka+1}</p>`);
+                angka++;
+
+                if(angka >= 10){
+                    break;
+                }
+            }
+
+        //CONTINUE
+            for(let i = 1; i < 100; i++){
+                if(i % 2 === 0){
+                    continue;
+                }
+                document.writeln(`<p>Perulangan Ganjil : ${i}</p>`);
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+Property
+ 1.length
+   Menghitung jumlah atribut dalam NamedNodeMap
+ 2.[index]
+   Mengakses objek Attr berdasarkan posisi index,dimulai dari 0
+
+Method
+ 1.getNamedItem(name)
+    Mengambil atribut berdasarkan nama.
+ 2.getNameditemNS(namespace,localName)
+    Mengambil atribut berdasarkan namespace dan
+    nama lokalnya
+ 3.item(index)
+    Mengambil atribut berdasarkan index
+ 4.removeNamedItem(name)
+    Menghapus atribut berdasarkan nama
+ 5.removeNamedItemNS(namespace,localname)
+    Menghapus atribut berdasarkan namespace dan 
+    nama lokalnya
+ 6.setNamedItem(attr)
+    Menambahkan atau mengganti atibut menggunakan objek
+    Attr
+ 7.setNamedItemNS(attr)
+    Menambahkan atau mengganti atribut menggunakan
+    objek Attr dengan memperhatikan namespace
+    

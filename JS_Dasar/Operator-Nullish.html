@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        OPERATOR-NULLISH
+         -Nullist value adalah null dan undefined
+         -Nullist coalescing operator (??) adalah mirip dengan
+          ternary operator,yang membedakan adalah pada kondisi
+          ,jika bernilai NULL atau undefined,baru value defaut
+          nya diambil
+        */
+        let parameter = null;
+        const hasil = parameter ?? "Nilai Default";
+         
+        document.writeln(`<p>${hasil}</p>`);
+    </script>
+</body>
+</html>

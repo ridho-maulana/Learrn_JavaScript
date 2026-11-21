@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Construktor Inheritance
+         -Dalam construktor kita biasanya membuat
+          property baik itu berisi value ataupun 
+          function
+         -Di dalam construktor,kita bisa memanggil
+          construktor lain,dengan begitu kita bisa 
+          mewarisi semua property yang dibuat di 
+          construktor lain tersebut
+         -Untuk memanggil construktor lain,kita bisa
+          menggunakan NamaConstructor.call(this.parameter)
+        */
+
+        function Employee(firstName){
+            this.firstName = firstName;
+            this.sayHello = function(name){
+                document.writeln(`Hi ${name}, My name is ${this.firstName}`)
+            }
+        }
+
+        function Manager(firstName,lastName){
+            Employee.call(this,firstName);
+            this.lastName = lastName;
+        }
+
+        const Ridho = new Employee("Ridho","Maulana");
+        Ridho.sayHello("Eko");
+    </script>
+</body>
+</html>

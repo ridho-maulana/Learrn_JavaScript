@@ -1,0 +1,22 @@
+Node-Method
+1.appendChild()
+    Menambahkan Node sebagai child
+2.removeChild()
+    Menghapus child Node
+3.replaceChild()
+    Mengganti child Node
+4.insertBefore()
+    Menambahkan Node sebelum Node tertentu
+5.cloneNode()
+    Menggandakan Node
+6.contains()
+    Mengecek apakah Node mengandung node tertentu
+7.hasChildNodes()
+    Mengecek apakah Node memiliki child
+8.isEqualNode()
+    Mengecek apakah dua Node memiliki struktur/isi yang sama
+9.isSameNode()
+    Mengecek apakah dua referensi menunjuk
+    Node yang sama
+10.normalize()
+    Merapihkan Text Node yang terpisah/berdekatan

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        `use strict`;  
+        /*
+        Destructuring
+         -Desctructuring adalah fitur yang bisa digunakan
+          untuk membongkar value-value di array atau
+          object ke dalam variabel-variable
+         -Fitur ini sangat mempermudah kita ketika ingin
+          mengambil data dari array atau object tanpa 
+          harus melalukan pemgambilan data satu persatu
+
+        Descructing Function Parameter
+         -Descructing tidak hanya bisa dilakukan di variabel
+          ,tapi juga bisa dilakukan di function parameter
+         -Hal ini membuat kita mudah ketika ingin mengambil
+          nested data dalam array atau object dalam function
+        
+        Default Valus
+         -Yang paling menarik di descructuring adalah,
+          kita bisa menambahkan default value nya
+         -Jadi misal kita melakukan descructuing terhadap
+          array,ternyata tidak ada datanya,maka kita bisa 
+          menambahkan default valuenya
+         -Begitu juga pada object,jika ternyata proeprty 
+          nya tidak ada,maka kita bisa menambahkan default
+          valuenya
+
+        Menggunakan nama variabel lain
+         -Saat melakukan destructuring di array,kita bisa
+          dengan mudah membuat nama variabel sesuka
+          kita
+         -Namun pada saat melakukan destructuring,kita harus
+          membuat nama variabel sama dengan nama property
+         -Kita juga bisa menggunakan nama variabel lain saat
+          melakukan destructuring object jika kita mau
+        */
+       
+        // //Normal
+        // const names = ["Ridho","Maulana","C"];
+        // const firstName = names[0];
+        // const middleName = names[1];
+        // const lastName = names[2];
+
+        // document.writeln(`${firstName} ${middleName} ${lastName}`);
+
+        // //Destructuring Array
+        // const namess = ["Ridho","Roma","Sari","Kelapa","Kue","Bolu"];
+        
+        // const [depan,tengah,belakang,...other] = namess;
+        
+        // document.writeln(`<p>${depan}`)
+        // document.writeln(`<p>${tengah}`)
+        // document.writeln(`<p>${belakang}`)
+        // document.writeln(`<p>${other}`)
+
+
+        //Normal data di object
+        const person = {
+            firstName: "Eko",
+            lastName : "Khannedy",
+            address : {
+                street : "Jalan Belum  Ada",
+                city : "Jakarta",
+                country : "Indonesia"
+            },
+            hobby : "Games",
+            channel : "Programmer Ridho Cell"
+        };
+        // const namaDepan = person.firstName;
+        // const namaBelakang = person.lastName;
+
+        //Dengan Cara
+        // const {firstName,lastName,address : {street,city,country},...other} = person;
+        // document.writeln(`<p>${firstName}`)   
+        // document.writeln(`<p>${lastName}`)   
+        // document.writeln(`<p>${street}`)  
+        // document.writeln(`<p>${city}`) 
+        // document.writeln(`<p>${other}`) 
+        
+            
+        //Descruction di Function parameter
+        function displayPerson({firstName,middleName,lastName}){
+            document.writeln(firstName);
+            document.writeln(middleName);
+            document.writeln(lastName);
+        }
+        const orang = {
+            firstName : "Ridho",
+            middleName : "Maulana",
+            lastName : "Candra"
+        };
+        displayPerson(orang);
+
+        //Descruction di Function parameter Array
+        function sum([first,second]){
+            return first + second; 
+        }
+
+        document.writeln(sum([10,10]))
+
+        //Default value
+        const iden = ["Natasya","Candra","Winata"];
+        const [awal,tengah,akhir = "Ada"] = iden;
+
+        document.writeln(`<p>${awal}`)
+        document.writeln(`<p>${tengah}`)
+        document.writeln(`<p>${akhir}`);
+
+        //Menggunakan nama variabel lain
+        const{
+            firstName : namaDepan ,
+            middleName :  namaTengah ,
+            lastName : namaBelakang}  = orang;
+
+        document.writeln(`</br></br><p>${namaDepan}</p>`)
+        document.writeln(`<p>${namaTengah}</p>`)
+        document.writeln(`<p>${namaBelakang}</p>`)
+            
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="container">
+        <p id="satu">Paragraf 1</p>
+        <p id="dua">Paragraf 2</p>
+        <p id="tiga">Paragraf 3</p>
+    </div>
+
+    <script>
+        //Deklarasi
+        const container = document.querySelector("#container")
+        const satu = document.querySelector("#satu")
+        const dua = document.querySelector("#dua")
+        const tiga = document.querySelector("#tiga");
+        console.info(container)
+
+        //addChild
+        const baru = document.createElement("p");
+        baru.id = "empat";
+        baru.textContent = "Aku Paragraf 4";
+        container.appendChild(baru);
+        //removeChild
+        container.removeChild(tiga);
+        //replaceChild
+        const ganti = document.createElement("p");
+        ganti.textContent = "Aku adalah seorang kapiten"
+        container.replaceChild(ganti,dua)
+
+        //insert before
+        const tambahan = document.createElement("p");
+        tambahan.textContent = "Hallo Gelo";
+        container.insertBefore(tambahan,empat)
+        //cloneNode
+        const clone = satu.cloneNode(true)
+        container.appendChild(clone)
+
+        //contains
+        console.info(satu.contains(tiga))
+        //hasChildNode
+        console.info(container.hasChildNodes())
+        
+
+    </script>
+</body>
+</html>

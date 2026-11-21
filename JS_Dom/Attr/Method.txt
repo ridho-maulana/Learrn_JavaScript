@@ -1,0 +1,16 @@
+Method Attr
+1.getAttributeNode()
+    Mengambil objek attr berdasarkan nama atribut
+2.setAttributeNode()
+    Mengambil objek Attr pada element
+3.removeAttributeNode()
+    Menghapus objek Attr dari Element
+4.getAttribute()
+    Mengambil nilai atribut sebagai string
+5.setAttribute()
+    Menambah atau mengubah atribut.
+6.removeAttribute()
+    Menghapus atribut berdasarkan nama.
+7.hasAttribute()
+    Meemriksa apakah atribut tersedia
+    

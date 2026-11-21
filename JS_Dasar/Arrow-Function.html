@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Arrow-Function
+         -Arrow Function adalah alternatif pembuatan
+          function yang lebih sederhana dari function
+          biasanya
+         -Namun terdapat limitasi dan juga tidak bisa
+          digunakan di semua situasi
+         -Dinamakan arrow function karena menggunakan
+          tanda =>(seperti panah)
+         -Berikut contoh beberapa kekurangan arrow function:
+            *tidak memilik fitur arguments object
+            *tidak bisa menggunakan function generator
+            *tidak bisa mengakses this(dibahas di function
+             di object)
+            *tidak bisa mengakses super(dibahas di JS OOP)
+
+        Arrow Function Tanpa Block
+         -Jika sebuah arrow function isinya sederhana,
+          misal hanya satu baris
+         -Kita bisa membuat arrow function tanpa
+          harus menggunakan block 
+
+        Arrow Function Return Value
+         -Arrow function bisa mengembalikan value,
+          sama seperti function biasanya
+         -Jika menggunakan block,maka kita perlu
+          menggunakan kata kunci return
+         -Jika tidak menggunakan block,kita tidak
+          perlu menggunakan kata kunci return
+        
+        Arrow Function Tanap Kurung Parameter
+         -Jika parameter di arrow function hanya
+          satu,kita bisa tidak menggunakan kurung
+          pada parameter
+
+        Arrow Function Sebagai Parameter
+         -Karena arrow function sama seperti
+          anonymous function
+         -Jadi kita juga bisa menggunakan arrow
+          function sebagai parameter di function
+          lain
+        */
+
+        //Arrow Function
+        const sayHello = (name) =>{
+            document.writeln(`<p>Hello ${name}</p>`);
+        }
+
+        //Arrow Function tanpa block
+        const sayNama = (nama) => document.writeln(`<p>Siapa ${nama}</p>`);
+
+        //Arrow Function return value
+        const Pertambahan = (awal,akhir) => awal + akhir;
+
+        //Arrow Function Tanap Kurung Parameter
+        const nama = nama => document.writeln(`<p>Apakah Kamu ${nama}`);
+
+
+        sayHello("Ridho");
+        sayNama("Natasya")
+        document.writeln(Pertambahan(10,20));
+        nama("Roro")
+
+        //Arrow Function Sebagai Parameter
+        function giveMeName(callback){
+            callback("Eolandra");
+        }
+
+        giveMeName(name => document.writeln(`<p>Hallllllo ${name}</p>`));
+
+    </script>
+</body>
+</html>

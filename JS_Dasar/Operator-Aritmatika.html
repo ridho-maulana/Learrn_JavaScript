@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Aritmatika</title>
+</head>
+<body>
+    <script>
+        /*
+        OPERATOR ARITMATIKA
+         1. +  (Pertambahan)
+         2. -  (Pengurangan)
+         3. *  (Perkalian)
+         4. ** (Pangkat)
+         5. /  (Pembagian)
+         6. %  (Sisa Bagi)
+
+        OPERATOR AUGMENTED
+         1.[result = result + 10]  -- [result += 10]
+         2.[result = result - 10]  -- [result -= 10]
+         3.[result = result * 10]  -- [result *= 10]
+         4.[result = result ** 10] -- [result **= 10]
+         5.[result = result / 10]  -- [result /= 10]
+         6.[result = result % 10]  -- [result %= 10]
+        
+        OPERATOR UNARY
+         1. +  = Menandakan nilai positif
+         2. -  = Menandakan nilai negatif
+         3. ++ = Increment, menaikkan 1 angka
+         4. -- = Decrement, menurunkan 1 angka
+        */
+
+        let  result = 1 + 2;
+        document.writeln("<P>1 + 2 = " + result + "</p>");
+        let originalResult = result;
+
+        result -= 5;
+        document.writeln("<p>" + originalResult + " - 1 = " + result + "</p>");
+        originalResult = result;
+
+        result *= 4;
+        document.writeln("<p>" + originalResult + " * 4 = " + result + "</p>");
+        originalResult = result;
+
+        originalResult++;
+        document.writeln("<p>Hasil = " + originalResult + "</p>")
+    </script>
+</body>
+</html>

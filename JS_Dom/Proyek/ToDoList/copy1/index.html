@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>My To Do List</h1>
+
+        <form id="formTugas">
+            <input type="text" id="inputTugas" placeholder="Masukkan Kegiatan">
+            <button type="submit">Tambah</button>
+        </form>
+        
+        <h3 class="oke">Daftar Kegiatan</h3>
+        
+        <ul id="daftarTugas">
+
+        </ul>
+
+        <p id="jumlahTugas">Jumlah tugas: <span id="jumlahT">0</span></p>
+    </div>
+
+    <script>
+        const formTugas = document.querySelector("#formTugas")
+        const inputTugas = document.getElementById("inputTugas")
+        const daftarTugas = document.querySelector("#daftarTugas")
+                   
+        formTugas.addEventListener("submit",function(event){
+            event.preventDefault();//agar halaman tidak realod
+            const inputan = inputTugas.value; 
+
+            if(inputan.trim() === ""){
+                return;
+            }
+
+            const li = document.createElement("li");
+            li.textContent = inputan;
+
+            const button = document.createElement("button");
+            button.textContent = "Hapus";
+
+            li.append(button)
+            daftarTugas.append(li);
+            // daftarTugas.append(button);
+
+            formTugas.reset();
+
+            const jumlahT = document.getElementById("jumlahT");
+            jumlahT.textContent = daftarTugas.children.length;
+
+            button.addEventListener("click",function(){
+                li.remove();
+                jumlahT.textContent = daftarTugas.children.length;
+            });
+        })
+    </script>
+</body>
+</html>

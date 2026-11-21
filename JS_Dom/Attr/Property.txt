@@ -1,0 +1,18 @@
+Property Attr
+1.name
+    Mendapatkan nama atribut,misalnya id,
+    class,atau type
+2.value
+    Mendapatkan atau mengubah nilai atribut
+3.ownerElement
+    Mendapatkan Element yang memiliki atribut
+    tersebut
+4.nameSpaceURL
+    Mendapatkan URL nameSpace atribut,jika ada
+5.localName
+    Mendapatkan nama lokal atribut
+6.prefix
+    Mendapatkan awalan namespace atribut,jika ada.
+7.specified
+    Property lama untuk memeriksa apakah atribut
+    ditentukan pada element;sudah deprecated

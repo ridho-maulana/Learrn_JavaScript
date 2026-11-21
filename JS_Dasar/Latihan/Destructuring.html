@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Object
+        const person = {
+            firstName : "Ridho Maulana",
+            lastName : "C",
+            address :{
+                street : "Mulyasari rt 003",
+                city : "Bandung",
+                country : "Indonesia"
+            },
+            hobby : "Badminton",
+            channel : "Ridho 1 Gaming"     
+        };
+
+        const {firstName,lastName,address : {street,city,country},channel} = person;
+
+        document.writeln(firstName);
+        document.writeln(country);
+
+
+        function dataDiri({firstName,lastName,channel}){
+            document.writeln("<p>" + firstName);
+            document.writeln(lastName);
+            document.writeln(channel)
+        }
+
+        dataDiri(person);
+
+
+        //Array
+        const nama = ["Aldavi","Ghazali"];
+        const [harep,tengah,tukang = "Samaran"] = nama;
+        
+            document.writeln(`<p>${harep}`)
+            document.writeln(`<p>${tengah}`)
+            document.writeln(`<p>${tukang}`)
+        
+
+        //Ganti nama variabel
+        const {
+            firstName : depan,
+            lastName : belakang 
+        } = person;
+
+        document.writeln(`<br><br><p>${depan}`);
+        document.writeln(`<p>${belakang}`);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        
+        */
+        function Person(firstName){
+            this.firstName = firstName;
+            this.sayHello = function(name){
+                document.writeln(`Hello ${name},My name is ${this.firstName}`);
+            }
+        }
+
+        Person.prototype.identitas = function(){
+            document.writeln(`<p>Nama saya Adalah ${this.firstName}`);
+        };
+
+        const ridho = new Person("Ridho")
+        const Natasya = new Person("Natasya");
+
+        ridho.sayHello("Eki");
+        ridho.identitas();
+    </script>
+        

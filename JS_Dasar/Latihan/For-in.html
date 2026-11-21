@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Objek
+        let anggota = {
+            Ayah : "Pak Doni",
+            Mamah : "Buk Dewi",
+            Jumlah : 5
+        };
+
+        for(const member in anggota){
+            document.writeln(`<p>${member} : ${anggota[member]}</p>`);
+        }
+
+        //array
+        let keluarga = [1,2,4,3,2]
+        for(const unik in keluarga){
+            document.writeln(`<p>Index ${unik} : ${keluarga[unik]}`)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+Poperty pada Element
+ 1.textContent
+    Mengambil/mengubah teks
+ 2.innerHTML
+    Mengambil/mengubah HTML di dalam Element
+ 3.innerText
+    Mengambil/mengubah teks yang terlihat
+ 4.id
+    Mengambil/mengubah id
+ 5.className
+    Mengambil/mengubah class
+ 6.classList
+    Mengelola class
+ 7.style
+    Mengubah CSS secara langsung
+ 8.value
+    Mengambil/mengubah nilai input
+ 9.checked
+    Mengetahui/mengubah checkbox
+ 10.disable
+    Mengetahui/mengubah kondisi disable

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Static Method
+         -Kata kunci static juga tidak hanya
+          bisa ditambahkan di field,tapi juga di
+          method
+         -Jika kita tambahkan di method,atinya method
+          tersebut jadi milik classnya,bukan prototype
+         -Dan untuk mengakses method tersebut,kita juga
+          bisa lakukan seperti mengakses static class field
+        */
+
+        class MathUtil{
+            static sum(...angka){
+                let total = 0;
+                for(const oke of angka){
+                    total += oke;
+                }
+                return total;
+            }
+        }
+
+        document.writeln(MathUtil.sum(1,1,2,3,4,5));
+    </script>
+</body>
+</html>

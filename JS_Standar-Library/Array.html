@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Array Loop
+         -Sebelumnya kita bisa menggunakan for in
+          dan fo of untuk melakukan iterasi Array,
+          namun Array juga memiliki method yang
+          bernama forEach()
+         -Method forEach bisa digunakan juga untuk 
+          melakukan iterasi data Array
+        */
+
+        //Array loop
+        const array = ["Ridho","Maulana","Candra"];
+
+        array.forEach(function(index,value){
+            console.info(`${value} ${index}`);
+        })
+
+        array.forEach((value,index) => console.info(`${index} : ${value}`))
+
+        array.forEach(value => console.info(value))
+
+
+        /*
+        Array Queue
+         -Dalam struktur data,terdapat tipe struktur bernama
+          Queue(Antrian)
+         -Dimana data masuk akan diposisikan di urutan paling
+          belakang
+         -Sedangkan data keluar akan diposisikan dari
+          urutan paling depan
+         -Mirip sekali dengan antian,atau istilahnya FIFO(First in first out)
+         -Kita bisa menggunakan Array dengan bantuan function
+          push() untuk menambah data di belakang,dan shif() untuk
+          mengambil dan menghapus data paling depan
+        */
+
+        const queue = [];
+
+        queue.push("Eko");
+        queue.push("Kurniawan");
+        queue.push("Khannedy");
+
+        console.info(queue.shift());
+        console.info(queue.shift())
+        console.info(queue.shift());
+
+        /*
+        Array Stack
+         -Struktur data Stack(Tumpukan) kebalikan dari Queue
+          ,dimana aturannya mirip dengan tumpukan kartu
+         -Saat kita memasukkan data,kita akan memasukkan di 
+          urutan paling belakang(atau atas)
+         -Sedangkan saat kita mengambil data,kita akan 
+          mengambil data dari paling belakang(atau atas)
+          terlebih dahulu
+         -Stack ini sifatnya LIFO(last in first out)
+         -Untuk menambah diurutan belakang,kita bisa menggunakan
+          function push()
+         -Dan untuk mengambil dan menghapus paling belakang,kita
+          bisa menggunakan function pop()
+        */
+        
+        const stack = [];
+        stack.push("Ridho");
+        stack.push("Maulana");
+        stack.push("Candra");
+
+        console.info(stack.pop());
+        console.info(stack.pop());
+        console.info(stack.pop());
+
+        /*
+        Array Search
+        Array memiliki banyak function untuk melakukan pencarian:
+        -find(value => boolean):value
+            Mencari data sesuai dengan kondisi
+        -findindex(value => boolean):number
+            Mencari data index sesuai dengan kondisi
+        -includes(value):boolean
+            Mengecek apakah terdapat data
+        -indexOf(value):number
+            Mengecek posisi index data
+        -lastIndexOf(value):number
+            Mengecek posisi index data terakhir
+        */
+
+        const source = [1,2,3,4,5,1,2,3,4,5,5,4];
+        console.info(source.find(value => value > 3)) //4(Yang pertama kali dapat)
+        console.info(source.findIndex(value => value > 3)) //3(angka setelah 3 index ke berapa)
+        console.info(source.includes(7)) //false
+        console.info(source.indexOf(5)) //4
+        console.info(source.lastIndexOf(4)) //9 (index terakhir di data  itu)   
+         
+        /*
+        Array Filter
+         -Array memiliki function untuk melakukan filter data
+          1.filter(value => boolean):Array
+            Melakukan filter data yang kondisinya
+            bernilai true
+        */
+
+        const numbers = [1,2,3,4,5,6,7,8,9,10];
+        console.info(numbers);
+        console.info(numbers.filter(value => value % 2 === 1));
+        console.info(numbers.filter(value => value % 2 === 0));
+
+        /*
+        Array Transform(Meerubah)
+         -Array juga memiliki function yang digunakan untuk
+          melakukan transformasi
+          1.map(value => result):Array<result>
+                Melakukan transform tiap value dan
+                menghasilkan array result
+                (Contoh dai strring ke integer atau dari string diubah string nya)
+          2.reduce(resultBefore,value => reesult):result
+                Melakukan transform dengan menggunakan
+                value array dan value selanjutnya,lalu
+                hasilnya dilanjutnya ke iterasi selanjutnya
+                (contoh mentotalkan semua data array number)
+                (dari kri ke kanan)
+          3.reduceRight(resultBefore,value => result)
+                Sama seperti reduce(),namun dilakukan 
+                dari belakang
+                (contoh mentotalkan semua data array number)
+                (dari kanan ke kiri)
+        */
+
+        const names = "Eko Kurniawan Khannedy".split(" ");
+        console.info(names.map(value => value.toUpperCase()))
+
+        const namesReduce = names.reduce((before,value) => before + " " + value);
+        console.info(namesReduce);
+
+        const namesRight = names.reduceRight((before,value) => before + " " + value)
+        console.info(namesRight)
+
+
+        const number = [1,2,3,4,5,6,7,8,9,10]
+        const total = number.reduce((before,value) => before + value);
+        console.info(total)
+    </script>
+</body>
+</html>

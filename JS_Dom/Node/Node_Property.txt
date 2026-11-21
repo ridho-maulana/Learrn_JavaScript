@@ -1,0 +1,36 @@
+Node-Poperty
+1.parentNode
+    Mendapatkan parent Node
+2.parentElement
+    Mendapatkan parent yang berupak parentElement
+3.childNodes
+    Mendapatkan semua child Node
+4.children
+    Mendapatkan semua child Element
+5.firstChild
+    Mendapatkan child Node pertama
+6.lastChild
+    Mendapatkan child Node terakhir
+7.firstElementChild
+    Mendapatkan child Element pertama
+8.lastElementChild
+    Mendapatkan child Element terakhir
+9.nextSibling
+    Mendapatkan Node sebelum Node sekarang
+10.peviousSibling
+    Mendapatkan Node sebelum Node sekarang
+
+
+11.nextElementSibling
+    Mendapatkan Element setelah Element sekarang
+12.previousElementSibling
+    Mendapatkan Element sebelum Element sekarang
+13.textContent
+    Mengambil/mengubah teks Node
+14.nodeName
+    Mendapatkan nama Node
+15.nodeType
+    Mengetahui jenis node
+16.nodeValue
+    Mengambil/mengubah nilai node tertentu
+    

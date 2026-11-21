@@ -1,0 +1,98 @@
+Event adalah suatu kejadian atau peristiwa 
+yang terjadi pada element HTML maupun objeck
+browser
+Event biasanya terjadi karena tindakan pengguna
+atau aktivitas browser
+
+Jenis-jenis Event JavaScript
+A.Mouse Events(event yang berhubungan dengan aktivitas mouse)
+    1.click
+        ketika element dklik
+    2.dblclick
+        ketika element diklik dua kali
+    3.mousedown
+        ketika tombol mouse ditentukan
+    4.mouseup
+        ketika tombol mouse dilepaskan
+    5.mousemove
+        ketika mouse bergerak
+    6.mouseover
+        ketika mouse memasuki area element
+    7.mouseout
+        ketika mouse meninggalkan area element
+    8.mouseenter
+        ketika mouse memasuki element
+    9.mouseleave
+        ketika mouse meninggalkan element
+    10.contextmenu
+        ketika menu klik kanan dimunculkan
+B.Keyboard Events(event yang berhubungan dengan aktivitas keyboard)
+    1.keydown
+        ketika timbol keyboard ditentukan
+    2.keyup
+        ketika tombol keyboard dilepaskan
+    contoh:
+        document.addEventListener("keydown",function(event){
+            console.log(event.key);
+        })
+        jika kamu menekan huruf A,console akan menampilkan a.
+C.Form Events(berhubungan dengan element form seperti input,select,dan textarea)
+    1.input
+        ketika nilai input berubah
+    2.change
+        ketika nilai elemen berubah dan perubahan dikonfirmasi
+    3.submit
+        ketika form dikonfirmasi
+    4.reset
+        ketika form direset
+    5.focus
+        ketika elemen mendapatkan fokus
+    6.blur
+        ketika elemen kehilangan fokus
+D.Windows Events(berhubungan dengan aktivitas browser atau jendela halaman)
+    1.load
+        ketika halaman dan resource selesai dimuat
+    2.resize
+        ketika ukuran jendela browser berubah
+    3.scroll
+        ketika halaman digulir
+    4.beforeunload
+        ketika halaman akan ditinggalkan
+    5.unload
+        ketika dokumen sedang dibongkar
+    6.pageshow
+        ketika halaman ditampilkan
+    7.pagehide
+        ketika halaman akan disembunyikan atau ditinggalkan
+    8.DOMContentLoaded
+        Ketika HTML selesai diproses oleh browser
+    9.online
+        ketika browser mendeteksi koneksi jaringan tersedia
+    10.offline
+        ketika browser mendeteksi koneksi jaringan terputus
+E.Clipboard Event(berhubungan dengan aktivitas clipboard)
+    1.copy
+        ketika pengguna menyalin teks
+    2.cut
+        ketika pengguna memotong teks
+    3.paste
+        ketika pengguna menempelkan teks
+F.Drag Events(berhubungan dengan aktivitas menarik dan melepaskan elemen).
+    1.drag
+        ketika elemen sedang ditarik
+    2.dragstart
+        ketika aktivitas menarik dimulai
+    3.dragend
+        ketika aktivitas menarik berakhir
+    4.dragenter
+        ketika element masuk ke area tujuan
+    5.dragleave
+        ketika elemen meninggalkan area tujuan
+    6.dragover
+        ketika elemen yang ditarik berada di atas area tujuan
+    7.drop
+        ketika element dilepaskan 
+
+
+
+  

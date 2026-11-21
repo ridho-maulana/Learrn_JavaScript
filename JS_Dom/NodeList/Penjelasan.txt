@@ -1,0 +1,7 @@
+Apa itu NodeList
+    NodeList adalah kumpulan Node yang disimpan
+ dalam satu objek.Dalam praktikum DOM,kamu akan
+ sering menemukannya saat menggunakan document.querySelectoAll().
+    Bayangkan kamu punya 3 paragraf di HTML,kalau
+ saya pilih ketiganya sekaligus,hasilnya berupa Node
+ list yang berisi ketiga element tersebut

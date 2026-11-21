@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <p class="teks">Paragraf 1</p>
+        <p class="teks">Paragraf 2</p>
+        <p class="teks">Paragraf 3</p>
+    </div>
+
+    <script>
+        const semuaParagraf = document.querySelectorAll(".teks");
+        //Properti
+            //length
+            console.info(semuaParagraf.length)
+            //[index]
+            console.info(semuaParagraf[2]);
+            console.info(semuaParagraf[1]);
+            console.info(semuaParagraf[0]);
+
+        //Method
+            //forEach
+            semuaParagraf.forEach(function(oke){
+                console.info(oke.textContent)
+            })
+            //entries()
+            for (const [index,oke] of semuaParagraf.entries()) {
+                console.info(index,oke);
+            }
+            //keys()
+            for (const oke of semuaParagraf.keys()) {
+                console.info(oke);
+            }
+                
+            
+    </script>
+</body>
+</html>

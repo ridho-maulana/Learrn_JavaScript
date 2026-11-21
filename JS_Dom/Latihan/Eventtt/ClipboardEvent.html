@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="nama" value="Belajar JavaScript">
+    <p id="salin"></p>
+    <p id="potong"></p>
+    <p id="tempel"></p>
+
+
+    <input type="text" id="name" placeholder="Tempel teks di sini">
+    <p id="kopi"></p>
+    <script>    
+        const nama = document.querySelector("#nama")
+        const salin = document.getElementById("salin");
+        const potong = document.getElementById("potong")
+        const tempel = document.getElementById("tempel")
+
+        //copy
+        nama.addEventListener("copy",function(){
+            salin.textContent = "Teks berhasil disalin!";
+        })
+        //cut
+        nama.addEventListener("cut",function(){
+            potong.textContent = "Teks dipotong"
+        })
+        //paste
+        nama.addEventListener("paste",function(){
+            tempel.textContent = "Teks suskses di tempel!!!!"
+        })
+
+        //event.clipboardData
+        const name = document.querySelector("#name");
+        const kopi = document.querySelector("#kopi")
+        name.addEventListener("paste",function(event){
+            const teks = event.clipboardData.getData("text");
+            console.info(teks);
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Membuat Class Error Manual
+         -Walaupun JS sudah memiliki standard class Error
+         -Namun alangkah baiknya,kita membedakan tiap
+          jenis error
+         -Untuk membuat error sendiri secara manual sangatlah
+          mudah,cukup membuat class turunan dari class Error
+         -Dan jangan lupa tambahkan parameter message,agar
+          bisa dikirimkan ke parameter di constuktor class
+          error
+        */
+
+        class ValidationError extends Error{
+            constructor(message,field){
+                super(message);
+                this.field = field;
+            }
+        }
+
+
+        class MathUtil{
+            static sum(...number){
+                if(number.length === 0){
+                    throw new ValidationError("Total parameter sould lebih dari 0","Numbers")
+                }
+
+                let total = 0;
+                for (const oke of number) {
+                    total += oke;
+                }
+                return total;
+            }
+        }
+
+        try{
+            document.writeln("<p>"+MathUtil.sum(1,1,1,11)); 
+        }catch(error){
+            if(error instanceof ValidationError){
+                console.info(`Terjadi error di field ${error.field} dengan error ${error.message}`)
+            }else{
+                console.info(`Ini error bro ${error.message}`);
+            }
+        }finally{
+            document.writeln("<p>Hallo saya kembali");
+        }
+
+
+    </script>
+</body>
+</html>

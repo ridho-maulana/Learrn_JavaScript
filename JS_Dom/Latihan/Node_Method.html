@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="container">
+        <p id="satu">Paragraf Satu</p>
+        <p id="dua">Paragraf Dua</p>
+        <p id="tiga">Paragraf Tiga</p>
+    </div>
+
+
+   <script>
+        //deklarasi
+        const container = document.querySelector("#container")
+        const satu = document.querySelector("#satu")
+        const dua = document.querySelector("#dua")
+        const tiga = document.querySelector("#tiga")
+        console.info(container)
+
+        //appendChild()-->Tambah Node sebagai child terakhir
+        const baru = document.createElement("p");
+        baru.textContent = "Paragraf Baru";
+        container.appendChild(baru)
+        //removeChild()-->Hapus child Node dari parent
+            // container.removeChild(dua)
+        //replaceChild()-->Ganti child lama dengan Node baru
+        const baruu = document.createElement("p");
+        baruu.textContent = "Paragraf Pengganti";
+        container.replaceChild(baruu,dua);
+           
+        //insertBefore()-->Masuk Node sebelum Node tertentu
+        baru.textContent = "Paragraf Baru";
+        container.insertBefore(baru,tiga)
+        //cloneNode()-->Menggandakan Node
+        const salinan = satu.cloneNode(true);
+        container.appendChild(salinan)
+        //contains()-->Cek apakah suatu node berada dalam Node lain
+        console.info(container.contains(satu))
+        console.info(satu.contains(tiga))
+        //hasChildNodes()-->Cek apakah sebuah Node mempunyai child Node
+        console.info(container.hasChildNodes());
+        const kosong = document.createElement("div");
+        console.info(kosong.hasChildNodes())
+           
+        //isEqualNode()
+        //isSameNode()
+        //normalize()
+   </script> 
+</body>
+</html>

@@ -1,0 +1,63 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f1f5f9;
+    padding:50px 20px;
+}
+
+.container{
+    max-width:500px;
+    margin:auto;
+    background-color:white;
+    padding:25px;
+    border-radius:10px;
+}
+
+h1{
+    text-align: center;
+    margin-bottom:25px;
+}
+
+form{
+    display: flex;
+    gap:10px; /**/
+}
+
+input{
+    flex: 1; /**/
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+button{
+    padding:12px;
+    border:none; /**/
+    background-color: #2563eb;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer; /**/
+}
+
+h3{
+    margin:25px 0 15px;
+}
+
+li{
+    padding:12px;
+    background-color:#f1f5f9;
+    margin-bottom:10px;
+    border-radius:5px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+#jumlahTugas{
+    margin-top:20px;
+}

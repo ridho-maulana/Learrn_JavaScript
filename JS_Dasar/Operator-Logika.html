@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Logika</title>
+</head>
+<body>
+    <script>
+        /*
+        -Operator Logika adalah operator untuk dua buah data boolean
+        -Hasil dari operator logika adalah boolean lagi
+
+        OPERATOR LOGIKA
+         1. &&  -- Dan
+         2. ||  -- Atau
+         3. !   -- Kebalikan
+        */
+
+        const nilaiUjian = 60;
+        const nilaiAbsen = 76;
+
+        const lulusUjian = nilaiUjian > 75;
+        document.writeln(lulusUjian);
+        const lulusAbsensi = nilaiAbsen > 75;
+        document.writeln(lulusAbsensi);
+        
+        const lulus = lulusUjian && lulusAbsensi;
+        document.writeln("<p>" + lulus + "</p>");
+    </script>
+</body>
+</html>
+
+

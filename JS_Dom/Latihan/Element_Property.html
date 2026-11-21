@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container" class="kotak saya">
+        <h1 id="judol">Belajar DOM</h1>
+
+        <p id="deskripsi">
+        Saya sedang belajar JavaScript.
+        </p>
+
+        <input id="nama" type="text" value="Ridho">
+
+        <br><br>
+
+        <input id="setuju" type="checkbox">
+     <button type="button" id="tombol">Klik Saya</button>
+
+        <br><br>
+    </div>
+
+    <script>
+        //textContent-->Ambil atau ubah teks di dalam Element
+        const judul = document.querySelector("#judol")
+        judul.textContent = "<b>Belajar JS</b>"
+        console.info(judul.textContent)
+        //innerHTML-->Ambil atau ubah HTML yang ada di dalam Element
+        const deskripsi = document.querySelector("#deskripsi")
+        deskripsi.innerHTML = "<b>Saya sedang belajar DOM</b>."
+        console.info(deskripsi.innerHTML)
+        //innerText-->ambil atau ubah teks yang terlihat oleh pengguna
+        const deskripsik = document.querySelector("#deskripsi")
+        console.info(deskripsik.innerText)
+
+
+        //id-->Ambil atau Ubah ID Element
+        const judulru = document.querySelector("#judol");
+        console.info(judulru.id)
+        judulru.id = "judul_baru";
+        console.info(judulru.id)
+        //className-->Ambil atau ubah class dalam bentuk String
+        const container = document.querySelector("#container");
+        console.info(container.className);
+        container.className = "sayang kamu";
+        console.info(container.className);
+        console.info(container)
+        //classList-->digunakan untuk mengelola class satu per satu
+        const judulsaya = container.querySelector("h1");
+        judulsaya.classList.add("judul_lama");
+        // judulsaya.classList.remove("judul_lama");
+        console.info(container)
+        
+
+        //Style-->mengubah CSS secara langsung melalui JS
+        const judulstyle = document.querySelector("#judul_baru");
+        judulstyle.style.color = "blue";
+        judulstyle.style.backgroundColor = "yellow";
+        judulstyle.style.fontSize = "50px" 
+        //value-->biasanya pada input,textarea,dan some form Element
+        const nama = document.querySelector("#nama")
+        nama.value = "Romi saputra"
+        //checked-->Mengetahui atau mengubah kondisi checkbox/radio button
+        const setuju = document.querySelector("#setuju")
+        console.info(setuju.checked)
+        setuju.checked = true;
+        console.info(setuju.checked)
+        //disabled-->mengetahui atau mengubah apakh element
+                   //dalam kondisi tidak bisa digunakan
+        const tombol = document.querySelector("#tombol")
+        console.info(tombol.disabled)
+        tombol.disabled = "true"
+    </script>
+</body>
+</html>

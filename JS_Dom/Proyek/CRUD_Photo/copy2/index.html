@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>My Photo Gallery</h1>
+
+        <!-- Form tambah photo -->
+        <form id="formFoto">
+            <!-- Input judul -->
+            <input type="text" id="judulFoto" placeholder="Masukkan Judul Foto">
+            <!-- Input deskripsi -->
+            <textarea id="deskripsiFoto" placeholder="Masukkan Deskripsi Foto"></textarea>
+            <!-- Input URL gambar -->
+            <input type="text" id="urlFoto" placeholder="Masukkan URL Gambar">
+            <!-- Button tambah -->
+            <button type="submit">Tambah Foto</button>
+        </form>
+
+        <h3>Daftar Foto</h3>
+        
+        <!-- Form update photo -->
+        <form id="formUpdate">
+            <!-- Input untuk memperbaharui photo -->
+        </form>
+
+        <!-- Pencarian -->
+        <input type="text" id="searchFoto" placeholder="Cari foto...">
+
+        <!-- Daftar foto -->
+        <div class="daftarFoto">
+            <!-- Card foto akan dibuat menggunakan JavaScript -->
+        </div>
+
+        <!-- Jumlah foto -->
+        <p class="jumlahFoto">Jumlah Foto: <span id="jumlahFoto">0</span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

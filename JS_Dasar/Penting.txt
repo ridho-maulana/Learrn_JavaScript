@@ -1,0 +1,294 @@
+12.Opera-Logika-nonBoll
+13.Truthy and Falsy
+
+
+1.Console
+    -.console.info()  --  Memberitahu informasi
+    -.console.warn()  --  Memberitahu informasi peringatan
+    -.console.error() --  Memberitahu informasi error
+    -.console.table() --  Memberitahu informasi dalam
+2.String template
+    const template = `Name : `;
+    const name = "Ridho Maulana C";
+    const templatee = `Name : ${name}`; (STRING TEMPLATE)
+3.Konversi String number
+    -.parseint(string)
+      Mengkonversi dari string kenumber(bilangan bulat)
+    -.parseFloat(string)
+      Mengkonversi dari string kenumber(bilangan pecahan)
+    -.number(string)
+      Mengkonversi dari string ke number(bilangan bulat kepecahan)
+    -.number.toString()
+      Mengkonversi dari number ke string
+4.Tipe data object
+    -Membuat Object Kosong
+        const orang = {};
+     Menambah atau mengubah
+        orang["Nama"] = "Ridho Maulana C";
+        orang["Alamat"] = "Mulyasari RT 003";
+        orang["Umur"] = 20;
+    -Membuat object dengan properties
+        const org = {
+            "nama asli" : "Riri kusmaya",
+            alamat : "Mulyasari no 35A",
+            umur : 30
+        };
+5.Popup-Prompt
+    -alert
+        alert("Selamat Belajar JS");
+    -prompt
+        const name = prompt("Siapa nama anda : ");
+        alert(`Hello ${name}`);
+    -confirm
+        const masuk = confirm("Anda yakin mau masuk?");
+        if(masuk){
+            const name = prompt("Siapa nama anda : ");
+            alert(`Hello ${name}`);
+        }else{
+            alert("Bye bye")
+        }
+6.Undefined
+
+
+
+7.Operator-TypeOf
+    -Untuk mengetahui jenis tipe data
+    -let data =0;
+     const typeData = typeof data;
+     document.writeln(`<p>${typeData}</p>`)
+8.Operator-In
+    -in operator adalah operator yang bisa dilakukan
+     untuk mengecek apakah sebuah property ada di dalam
+     object aatau tidak
+    -Jika property tersebut ada di object,maka hasilnya true
+     ,sedangkan jika tidak, maka hasilnya false
+    -Tidak hanya di object,in juga bisa digunakan untuk
+     mengecek index di Array
+    -const person = {
+        firstName: "Ridho",
+        latName:  "Maulana"
+     };
+     const result = "firstName" in person  //true
+     document.writeln(`<p>${result}</p>`)
+    -const names = [null,"Ridho Maulana",null];
+     const nameResul = 3 in names; //true
+     document.writeln(`<p>${nameResul}</p>`);
+9.Operator-Ternary
+    -let ucap = nila > 75 ? "Anda Lulus" : "Anda Tidak Lulus";
+10.Operator-Nullish
+    -Nullist value adalah null dan undefined
+    -let parameter = null;
+     const hasil = parameter ?? "Nilai Default";
+11.Optional-Chaining  //NANTI
+    -Optional chaining operator(?) merupakan operator
+     yang digunakan untuk mengamankan ketika kita ingin
+     mengakses property sebuah object dari data nullish
+    -Jika kita mencoba mengakses property dari sebuah
+     object dari data nullish tanpa menggunakan optional
+     chaining operator,maka akan terjadi error
+    -let country = person?.country;
+
+
+
+
+
+12.For-in
+    -For in merupakan perulangan for yang digunakan
+     untuk mengiterasi seluruh data property di
+     object atau index di array
+    -Walaupun for in bisa digunakan untuk array,namun
+     tidak direkomendasikan untuk array,karena biasanya
+     kita jarang sekali butuh data index untuk array,
+     kita bisa menggunakan For of(yang dibahas setelah ini)
+    -const person = {
+        firstName :  "Ridho",
+        middleName : "Maulana",
+        lastName : "C"
+     };
+     for(const property in person){
+        document.writeln(`<p>Property ${property} : ${person[property]}</p>`)
+     }
+    -let anggota = ["Ridho","Natasya","Al davi"]
+     for(const proper in anggota){
+         document.writeln(`<p>Index ${proper} : ${anggota[proper]}</p>`)
+     }
+13.For-of
+    -Jika For in digunakan untuk melakukan iterasi
+     property atau index,berbeda dengan For of,ini
+     digunakan untuk melakukan iterasi terhadap isi
+     value dari iterable object,seperti Array,String
+     dan lain-lain
+    -For of tidak bisa digunakan untuk melakukan iterasi
+     data di object,karena object bukanlah iterable
+    -const names = ["Eko","Kurniawan","Khannedy"];
+     for(const name of names){
+         document.writeln(`<p>Name : ${name}</p>`)
+     }
+14.With-Statement
+    -With statement merupakan fitur yang digunakan
+     untuk menurunkan sebuah scope data
+    -Dengan menggunakan with statement,kita bisa
+     mengakses proeprty dalam sebuah data tanpa 
+     harus menyebut datanya
+    -//Tanpa With Statement
+     const person = {
+         firstName : "Ridho",
+         middleName : "Maulana",
+         lastName : "Candra"
+     };
+     document.writeln(person.firstName)
+     document.writeln(person.middleName)
+     document.writeln(person.lastName)
+    -//Dengan With Statement
+     with(person){
+        document.writeln(firstName);
+        document.writeln(middleName);
+        document.writeln(lastName);
+     }
+15.Rest-Parameter
+    -Rest Parameter adalah fitur dimana kita bisa
+     mengirim data sebanyak-banyak nya pada satu
+     parameter,dan secara otomatis akan di konversi
+     menjadi array
+    -function sum(name, ...data){
+         let total = 0;
+         for(const item  of data){
+             total += item
+         }
+         document.writeln(`<p>Total ${name} ${total}</p>`);
+     }
+     sum(`Orange`,1,2,4,3,1);
+     sum(`Apple`,5,5,5,5);
+16.Function-Sebagai-Value
+    -function sayHello(name){
+         document.writeln(`<p>Hello ${name}</p>`);
+     }
+     let say = sayHello;
+     sayHello("Ridho");
+     say("Oke")
+17.Function-Anonymous
+    -Sebelumnya kita selalu membuat function
+     dengan nama
+    -Kita juga bisa membuat function tanpa nama
+     function,atau istilahnya adalah anonymous 
+     function
+    -let say = function(name){
+         document.writeln(`<p>Hello ${name}</p>`);
+     }
+     say("Olandro");
+18.Function-Dalam-Function(Nanti)
+19.Function-Generator
+    -Gnerator adalah data yang bisa intarasi seperti array
+    -Untuk membuat function generator,kita perlu
+     menggunakan tanda *(bintang) setelah kata 
+     function
+    -Dan untuk mengembalikan data di setiap iterasi,
+     kita bisa gunakan kata kunci yield diikuti
+     datanya
+    -function* createNames(){
+         yield "Ridho";
+         yield "Maulana";
+         yield "Candra";
+     }
+     const names = createNames();
+     for (const name of names) {
+         document.writeln(name);
+     }
+
+
+
+
+20.Arrow-Function
+     //Arrow Function
+        const sayHello = (name) =>{
+            document.writeln(`<p>Hello ${name}</p>`);
+        }
+     //Arrow Function tanpa block
+        const sayNama = (nama) => document.writeln(`<p>Siapa ${nama}</p>`);
+     //Arrow Function return value
+        const Pertambahan = (awal,akhir) => awal + akhir;
+     //Arrow Function Tanap Kurung Parameter
+        const nama = nama => document.writeln(`<p>Apakah Kamu ${nama}`);
+     //Arrow Function Sebagai Parameter
+        function giveMeName(callback){
+            callback("Eolandra");
+        }
+        giveMeName(name => document.writeln(`<p>Hallllllo ${name}</p>`));
+21.Closure(Nanti)
+22.Object-Method
+    //Membuat object dengan method
+        const person = {
+            name : "Ridho",
+            sayHello : function(name){
+                document.writeln(`Hello ${name}`);
+            }
+        };
+        person.sayHello("Roro");
+    //Menambah object ke method
+        person.sayUmur = function (umur){
+            document.writeln(`<p>Umur kamu ${umur} tahun`)
+        }
+23.Arrow-Function object
+    const person = {
+        name : "Ridho",
+        sayHello : name =>{
+            document.writeln(this);
+            document.writeln(`<p>Hello ${name}`);
+        }
+    }
+24.Getter-Setter
+    const person = {
+        firstName : "Ridho",
+        lastName : "Maulana C",
+        get fullName(){
+            return `<p>${this.firstName} ${this.lastName}`;
+        }, 
+        set fullName(value){
+            const array = value.split(" ");
+            this.firstName = array[0];
+            this.lastName = array[1];
+        }
+    }
+    document.writeln(person.fullName);
+    person.fullName = "Oki sia";
+25.Desctructuring
+    -Desctructuring adalah fitur yang bisa digunakan
+     untuk membongkar value-value di array atau
+     object ke dalam variabel-variable
+    -Fitur ini sangat mempermudah kita ketika ingin
+     mengambil data dari array atau object tanpa 
+     harus melalukan pemgambilan data satu persatu
+    //Descruction di Function parameter
+        function displayPerson({firstName,middleName,lastName}){
+            document.writeln(firstName);
+            document.writeln(middleName);
+            document.writeln(lastName);
+        }
+        const orang = {
+            firstName : "Ridho",
+            middleName : "Maulana",
+            lastName : "Candra"
+        };
+        displayPerson(orang);
+    //Descruction di Function parameter Array
+        function sum([first,second]){
+            return first + second; 
+        }
+
+        document.writeln(sum([10,10]))
+    //Default value
+        const iden = ["Natasya","Candra","Winata"];
+        const [awal,tengah,akhir = "Ada"] = iden;
+
+        document.writeln(`<p>${awal}`)
+        document.writeln(`<p>${tengah}`)
+        document.writeln(`<p>${akhir}`);
+    //Menggunakan nama variabel lain
+        const{
+            firstName : namaDepan ,
+            middleName :  namaTengah ,
+            lastName : namaBelakang}  = orang;
+
+        document.writeln(`</br></br><p>${namaDepan}</p>`)
+        document.writeln(`<p>${namaTengah}</p>`)
+        document.writeln(`<p>${namaBelakang}</p>`)

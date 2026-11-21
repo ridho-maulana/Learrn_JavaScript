@@ -1,0 +1,45 @@
+1.console
+    -console.info();
+    -console.warn();
+    -console.error();
+    -console.table();
+2.Konversi String number
+    -parseint(string);
+        konversi string ke int
+    -parsefloat(string);
+        konversi string ke float
+    -Number(string);
+        konversi string
+    -number.toString()
+        dari number ke string
+3.Tipe data object
+    1.const ob = {
+         Nama : "RidhoMaulana",
+         kelas : 2
+      };
+    2.const ob = {};
+      ob["Nama"] = "Ridho Maulan";
+4.prompt
+    -alert();
+    -prompt();
+    -confirm();
+
+
+5.TypeOf
+    let nama = "oek";
+    let yes = typeof nama;
+6.in
+    -let nama = [1,"Ridho","Oke",]
+     const hasil = 3 in nama;
+    -let ok = {
+        nama : "Ridho",
+        kelas : 2
+     };
+     const hasil = "nama" in ok
+7.Ternary
+    let hasil = 75;
+    const nilai = hasil > 80 ? "anda lulus" : "Anda belum lulus";
+8.Nullish
+    let hasil = null;
+    let oke = hasil ?? "defualt"
+

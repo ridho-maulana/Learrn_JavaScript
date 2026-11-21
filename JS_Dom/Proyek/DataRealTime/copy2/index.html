@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Cari Kontak / Nama</h2>
+        <input type="text" id="inputText" placeholder="Ketika nama yang dicari...">
+
+        <ul id="daftarItem">
+            <li>Ridho Maulana</li>
+            <li>Budi Santoso</li>
+            <li>Siti Aminah</li>
+            <li>Joko Widodo</li>
+            <li>Dewi Lestari</li>
+            <li>Ahmad Dhani</li>
+        </ul>
+    </div>
+
+    <script>
+        const inputText = document.getElementById("inputText")
+        const daftarItem = document.querySelectorAll("#daftarItem li");
+
+        inputText.addEventListener("input",function(event){
+            const keyword = event.target.value.toLowerCase();//
+
+            daftarItem.forEach(function(item){//
+                const data = item.textContent.toLowerCase();
+
+                if(data.includes(keyword)){
+                    item.style.display = "block";
+                }else{
+                    item.style.display = "none";
+                }
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Strict Mode
+         -Saat kita menjalankan kode program Java
+          Script,secara default kode program kita
+          berjalan dalam mode tidak strict,atau
+          istilahnya sloppy mode
+         -Ketika strict mode dijalankan,maka akan 
+          merubah beberapa cara kerja di JavaScript
+          ,seperti
+            *Merubah beberapa JavaScript Error dari 
+             yang tadinya silent error,menjadi throw
+             error(terlihat)
+            *Memperbaiki beberapa kesalahan engine 
+             JavaScript untuk optimalisasi
+            *Menolak beberapa kode perintah yang 
+             kedepannya akan digunakan di ECMAScript 
+
+        Cara Jalankan Strict Mode
+         -Untuk menyalakan strict mode,kita bisa
+          menambahkan `use strict` pada baris awal
+          file JavaScript kita
+         -Atau bisa juga ditambahkan di awal function kita
+        */
+        function useStrictMode(){
+            `use strict`;
+            const person = {
+                firstName : "Ridho"
+            };
+
+            with(person) {
+             console.info(firstName)
+            }
+        }
+
+        useStrictMode();
+    </script>
+</body>
+</html>

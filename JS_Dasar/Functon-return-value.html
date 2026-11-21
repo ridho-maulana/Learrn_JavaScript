@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Function Return Value
+         -Secara default,Function itu tidak menghasilkan
+          value apapun,namun jika kita ingin,kita bisa 
+          membuat sebuah function mengembalikan value
+         -Agar function bisa mengembalikan value,kita bisa
+          menggunakan return di dalam function nya
+         -Dan di dalam 
+        */
+
+        //Membuat function dengan parameter dan return value
+        function sayHello(firstName,lastName){
+            const say  = `Hello ${firstName} ${lastName}`;
+            return say;
+        }
+
+        //memanggil function dan menangkap return valuenya
+        const result = sayHello("Ridho","Maulana");
+        document.writeln(`<p>${result}</p>`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+Method Pada Element
+ 1.querySelector()
+    Mencari Element di dalam Element tersebut
+ 2.querySelectorAll()
+    Mencari semua Element di dalamnya
+ 3.setAttribute()
+    Menambahkan/mengubah attribute
+ 4.getAttribute()
+    Mengambil nilai attribute
+ 5.removeAttrribute()
+    Menghapus attribute
+ 6.remove()
+    Menghapus Element
+ 7.append()
+    Menambhakan sesuatu ke dalam Element
+ 8.prepend()
+    Menambahkan sesuatu di awal Element
+ 9.addventListener()
+    Memberikan event/aksi ,membuat website interaktif
+    

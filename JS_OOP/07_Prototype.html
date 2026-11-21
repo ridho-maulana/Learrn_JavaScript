@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Prototype Inheritance
+         -Saat kita membuat object dari constructor function,
+          Object tersebut disebut instance,semua property
+          (baik itu value atau method),akan berada di dalam 
+          instance object nya
+         -Setiap kita membuat sebuah constructor function,maka
+          secara otomatis akan dibuatkan prototype nya,misal
+          ketika kita membuat constructor function Person,maka
+          akan ada Person.prototype
+         -Saat kita membuat sebuah object instace,secara otomatis
+          object tersebut adalah turunan dari Constructor.prototype nya
+         -Untuk mengakses prototype milih sebuah instance,kita  bisa
+          menggunakan _proto_
+         -Contoh object istance eko dan budi mengarah ke
+          prototy Person,nah person juga mengarah ke Prototy Object
+
+        Menambah Property ke Prototype
+         -Property mirip object,dimana kita bisa menambah
+          property baik itu value ataupun method
+         -Saat kita menambah sebuah property ke prototype
+          ,secara otomatis,semua object instance yang 
+          turunan dari prototype tersebut akan memiliki
+          property tersebut
+        */
+
+        function Person(firstName,lastName){
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.sayHello = function(name){
+                console.info(`Hello ${name}, My name is ${this.firstName}`);
+            }
+        }
+
+        //Object Instance
+        const eko = new Person("Eko","Khannedy");
+        const budi = new Person("Budi","Kurniawan");
+
+        console.log(eko);
+        console.log(budi)
+
+
+        //Menambahkan Property ke prototype
+        Person.prototype.sayBye = function(){
+            document.writeln("Good Bye");
+        }
+        Person.prototype.run = function(){
+            document.writeln(`<p>${this.firstName} is Running`);
+        }
+
+        eko.sayBye();
+        budi.run();
+    </script>
+</body>
+</html>

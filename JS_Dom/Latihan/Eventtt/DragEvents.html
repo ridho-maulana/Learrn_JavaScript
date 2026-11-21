@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="kotak" draggable="true">
+        Tarik saya
+    </div>
+
+    <p id="hasil"></p>
+    <p id="drag"></p>
+    <p id="dragend"></p>
+
+
+    <div id="tujuan">
+        Letakkan di sini
+    </div>
+    <!-- <p id="dragenter"></p>
+    <p id="dragleav"></p>
+    <p id="dragove"></p> -->
+    <p id="dro"></p>
+
+    <script>               
+        const kotak = document.querySelector("#kotak");
+        const hasil = document.getElementById("hasil")
+
+        //dragstart-->terjadi ketika pengguna mulai menarik suatu elemen
+        kotak.addEventListener("dragstart",function(){
+            hasil.textContent = "Proses drag dimulai!";
+        })
+        //drag-->terjadi selama elemen sedang ditarik oleh pengguna
+        const drag = document.getElementById("drag")
+        kotak.addEventListener("drag",function(){
+            drag.textContent = "Elemen sedang ditarilk"
+        })
+        //dragend-->ketika aktivitas menarik elemen berakhir,baik dilepaskan dll
+        const dragend = document.getElementById("dragend")
+        kotak.addEventListener("dragend",function(){
+            dragend.textContent = "Proses drag selesai!";
+        });
+
+
+        const tujuan = document.querySelector("#tujuan")
+        const dragenter = document.getElementById("dragenter");
+        /*
+        dragenter-->terjadi ketika elemen sedang ditarik memasuki area tujuan.
+        contoh penggunaan:
+            -Mengubah warna area tujuan
+            -Memberikan tanda bahwa area bisa menerima elemen
+            -Menampilkan afek visual ketika elemen memasuki area drop
+        */
+        tujuan.addEventListener("dragenter",function(){
+            dragenter.textContent = "Elemen memasuki area tujuan!";
+        })
+
+
+        /*
+        dragleave-->terjadi ketika elemen yang sedang ditarik meninggalkan area tujuan
+        contoh penggunaan:
+            -Mengembalikan warna area tujuan
+            -Menghilangkan efek highlight
+            -Menghapus tanda area drop
+        */
+        const dragleav = document.getElementById("dragleav")
+        tujuan.addEventListener("dragleave",function(){
+            dragleav.textContent = "Elemen meninggalkan area tujuan!";
+        })
+
+
+        /*
+        dragover->terjadi ketika elemen yang sedang ditarik berada di atas
+                  area tujuan
+        mengapa menggunakan event.preventDefault
+            karena secara default,borwser tidak izinkan sebagian besar
+            elemen menjadi target drop
+            Dengan preventDefault(),kita izinkan area tersebut menerima
+            proses drop
+        */
+        const dragove = document.getElementById("dragove")
+        tujuan.addEventListener("dragover",function(){
+            event.preventDefault();
+            dragove.textContent = "Elemen berada di atas area tujuan!";
+        })
+
+    
+        const dro = document.getElementById("dro");
+        //drop-->ketika pengguna melepaskan elemen yang ditarik pada area tujuan
+        tujuan.addEventListener("drop",function(){
+            event.preventDefault();
+            dro.textContent = "Elemen berhasil dilepaskan"
+        })
+
+
+
+    //property dan method
+        //event.dataTransfer
+        kotak.addEventListener("dragstart",function(event){
+            event.dataTransfer.setData("text","Belajar JavaScript");
+        })
+        tujuan.addEventListener("drop",function(event){
+            event.preventDefault();
+            const data = event.dataTransfer.getData("text");
+            console.log(data);
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #kotak{
+            background-color: red;
+            width:80px;
+            margin:0 auto;
+        }
+        #ridho{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="kotak">
+        <p id="ridho">Ridho </p>
+    </div>
+
+
+
+    <script>
+        const kotak = document.getElementById("kotak");
+        const ridho = document.querySelector("p");
+        // kotak.style.backgroundColor = "Red";
+        // kotak.style.width = "80px"
+        // kotak.style.margin = "0 auto";
+        // ridho.style.textAlign = "center"
+        const stile = window.getComputedStyle(kotak);
+
+        console.info(stile.backgroundColor);
+        console.info(stile.width);
+        console.info(stile.margin);
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Employee(firstNam){
+            this.firstNam = firstNam;
+            this.sayHello = function(name){
+                document.writeln(`Hello ${name}, My name is ${this.firstNam}`)
+            }
+        }
+
+        function Manager(firstName,lastName){
+            Employee.call(this,firstName);
+            this.lastName = lastName;
+        }
+
+        const Ridho = new Manager("Ridho","Maulana");
+        Ridho.sayHello("Eko");
+    </script>
+</body>
+</html>

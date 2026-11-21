@@ -1,0 +1,17 @@
+NamedNodeMap
+ NamedNodeMap adalah objek yang berisi kumpulan
+ atribut dari suatu Element,dan setiap atribut 
+ dapat diakses berdasarkan nama atau index
+ 
+ contoh
+ <input id="nama" type="text" class="form-input">
+
+ elemen <input> tersebut mempunyai tiga atribut
+ -id="nama"
+ -type="text"
+ -class="form-input"
+
+ jadi:
+ 1.NodeList -> kumpulan Node
+ 2.Attr -> satu atribut
+ 3.NamedNodeMap -> kumpulan atribut milik suatu Element

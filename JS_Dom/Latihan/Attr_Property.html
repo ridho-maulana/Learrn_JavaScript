@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <input type="text" class="form-input" id="nama">
+    </div>
+
+    <script>
+        const input = document.querySelector("#nama");
+        const atribut = input.getAttributeNode("id");
+
+        //name-->Dapatkan nama atribut
+        console.log(atribut.name);
+        //localName-->Dapat nama lokal atribut
+        console.log(atribut.localName);
+        //namespaceURL-->Dapatkan URL namespace atribut,jika ada
+        console.log(atribut.namespaceURI)
+        //value-->Dapat atau ubah nilai atribut
+        console.log(atribut.value)
+        atribut.value = "username";
+        console.log(atribut.value)
+        //ownerElement-->Dapat Element yang memiliki atribut tersebut
+        console.log(atribut.ownerElement)
+        //prefix-->mendapatkan awalan namespace atribut,jika ada
+        console.log(atribut.prefix)
+    </script>
+</body>
+</html>

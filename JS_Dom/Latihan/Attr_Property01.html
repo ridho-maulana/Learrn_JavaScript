@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <input type="text" class="ini-class" id="ini-id">
+    </div>
+
+    <script>
+        const input = document.querySelector("#ini-id");
+        const atribut = input.getAttributeNode("id");
+
+        //name
+        console.info(atribut.name)
+        //namespaceURL
+        console.info(atribut.namespaceURI)
+        //nodeName
+        console.info(atribut.nodeName);
+        //value
+        console.info(atribut.value)
+        atribut.value = "Okegas";
+        console.info(atribut.value)
+        //prefix
+        console.info(atribut.prefix)
+        //ownerElement
+        console.info(atribut.ownerElement)
+    </script>
+</body>
+</html>

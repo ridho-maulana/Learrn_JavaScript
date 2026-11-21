@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>My To Do List</h1>
+
+        <form id="formKegiatan">
+            <input type="text" id="kegiatan" placeholder="Masukkan Kegiatan">
+            <button type="submit">Tambah</button>
+        </form>
+
+        <h3>Daftar Kegiatan</h3>
+
+        <ul class="daftarTugas">
+
+        </ul>
+
+        <p>Jumlah Tugas: <span class="jumlah">0</span></p>
+
+        <div id="perbarui"></div>
+    </div>
+
+    <script>
+        const formKegiatan = document.querySelector("#formKegiatan");
+        const kegiatan = document.getElementById("kegiatan");
+        const daftarTugas = document.querySelector(".daftarTugas");
+
+        formKegiatan.addEventListener("submit",function(event){
+            event.preventDefault();
+            const li = document.createElement("li");
+
+            if(kegiatan.value.trim() === ""){
+                return;  
+            }
+
+            const hapus = document.createElement("button");
+            hapus.textContent = "Hapus";
+            const update = document.createElement("button");
+            update.textContent = "Update"
+            const dif = document.createElement("div");
+            dif.append(hapus);
+            dif.append(update);
+
+            li.textContent = kegiatan.value;
+            li.append(dif);
+            daftarTugas.append(li)
+
+            const jumlah = document.querySelector(".jumlah");
+            jumlah.textContent = daftarTugas.children.length;
+
+            formKegiatan.reset();
+
+            hapus.addEventListener("click",function(){
+                li.remove();   
+                jumlah.textContent = daftarTugas.children.length;            
+            })
+
+            update.addEventListener("click",function(event){
+                event.preventDefault();
+
+                const perbarui = document.getElementById("perbarui");
+                const baru = document.createElement("input");
+                const kirimupdate = document.createElement("button");
+
+                kirimupdate.textContent = "Update";
+                baru.setAttribute("type","text");
+                baru.placeholder = "Masukkan Data Terbaru.."
+                perbarui.append(baru);
+                perbarui.append(kirimupdate);
+
+                kirimupdate.addEventListener("click",function(){
+                    if(baru.value.trim() === ""){
+                        perbarui.innerHTML = "";
+                        return;
+                    }
+
+                    li.textContent = baru.value;
+                    li.append(dif);
+
+                    perbarui.innerHTML = "";
+                })
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- input -->
+        Nama :<input type="text" id="nama">
+        <p id="hasil"></p>
+    <!-- change -->
+        <select id="jurusan">
+            <option value="Informatika">Informatika</option>
+            <option value="Sistem Informasi">Sistem Informasi</option>
+            <option value="Manajemen">Manajement</option>
+        </select>
+        <p id="hasilku"></p>
+    <!-- submit -->
+        <form id="form">
+            <input type="text" id="nama" placeholder="Nama">
+            <button type="submit">Kirim</button>
+        </form>
+    <!-- Reset -->
+        <form id="formku">
+            <input type="text" placeholder="Nama">
+            <button type="reset">Reset</button>
+        </form>
+        <p id="hasilf"></p>
+    <!-- Fokus -->
+        <input type="text" id="namaku">
+    <!-- Select -->
+        <input type="text" id="namaki" value="Belajar JavaScript">
+    <!-- invalid -->
+        <form action="">
+            <input type="email" id="emal" required>
+            <button type="submit">Kirim</button>
+            <p id="haha"></p>
+        </form>
+
+
+    <script>
+        const nama = document.querySelector("#nama");
+        const hasil = document.querySelector("#hasil");
+
+        //input-->nilai elemen input berubah karena interaksi pengguna
+        nama.addEventListener("input",function(){
+            hasil.textContent = nama.value;
+        })
+        //change-->ketika nilai elemen berubah dan perubahannya dikonformasi
+        const jurusan = document.querySelector("#jurusan")
+        const hasilku = document.getElementById("hasilku")
+        jurusan.addEventListener("change",function(){
+            hasilku.textContent = jurusan.value;
+        })
+        //submit-->terjadi ketika pengguna mengirimkan formulir
+        const form = document.querySelector("#form");
+        form.addEventListener("submit",function(event){
+            event.preventDefault();//mencegah reload halaman
+            console.info("Form berhasil dikirim");
+        })
+        //reset-->terjadi ketika formulir direset
+        const formku = document.querySelector("#formku");
+        const hasilf = document.querySelector("#hasilf")
+        formku.addEventListener("reset",function(){
+            hasilf.textContent = "Form direset";
+        })
+
+        //fokus-->terjadi ketika suatu elemen mendapatkan fokus
+        const namaku = document.querySelector("#namaku");
+        namaku.addEventListener("focus",function(){
+            console.info("Input sedang aktif");
+        })
+        //blur-->terjadi ketika suatu elemen kehilangan fokus
+        namaku.addEventListener("blur",function(){
+            console.info("Input tidak aktif")
+        })
+        //ketika dicopy
+        //select-->pengguna menyeleksi teks di dalam input atau textarea
+        const namaki = document.querySelector("#namaki");
+        namaki.addEventListener("select",function(){
+            console.info("Teks berhasil diseleksi!");
+        })
+        //invalid-->ketika suatu elemen form tidak memenuhi aturan validasi HTML
+        const emal = document.querySelector("#emal");
+        const haha = document.querySelector("#haha");
+        emal.addEventListener("change",function(event){
+            event.preventDefault();
+            if(emal.validity.valid){
+                haha.textContent = "Email valid";
+            }else{
+                haha.textContent = "Email tidak valid";
+            }
+        })
+    </script>
+</body>
+</html>

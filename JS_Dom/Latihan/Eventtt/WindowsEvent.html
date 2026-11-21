@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            min-height:2000px;
+        }
+    </style>
+</head>
+<body>
+    <p id="posisi"></p>
+    <p id="onlen"></p>
+    <p id="oflin"></p>
+    <script>
+        /*
+        load->terjadi ketika halaman beserta seluruh resource
+              yang diperlukan,seperti gambar dan stylesheet,
+              selesai dimuat
+        contoh penggunaan:
+            -Menjalankan animasi setelah halaman selesai dimuat
+            -Menjalankan fungsi setelah gambar selesai dimuat
+            -Menginisialisasi fitur website yang butuh resource halaman
+        */
+        window.addEventListener("load",function(){
+            console.info("Halaman selesai dimuat!");
+        })
+
+
+        /*
+        DOMCOntentLoaded->terjadi ketika browser sudah selesai
+                          memproses HTML dan membangun struktur DOM
+        */
+        document.addEventListener("DOMContentLoaded",function(){
+            console.info("DOM berhasil dimuat!");
+        })
+
+
+        /*
+        resize->terjadi ketika ukuran jendela browser berubah
+        contoh penggunaan:
+            -Menyesuaikan tampilan website
+            -Mengubah ukuran elemen
+            -Mendeteksi perubahan dan tinggi browser
+        */
+       window.addEventListener("resize",function(){
+        console.info("Ukuran browser berubah!");
+       })
+    //    window.addEventListener("resize",function(){
+    //     console.info("Lebar:",window.innerWidth);
+    //     console.info("Tinggi:",window.innerHeight);
+    //    })
+
+
+       /*
+       Scroll->Ketika pengguna mengulir halan keatas,bawah,kiri,kanan
+       contoh penggunaan:
+            -Membuat tombol kembali keatas
+            -Membuat navbar berubah ketika halaman di-scroll
+            -Membuat animasi ketika pengguna mencapau bagian tertentu
+            -Menampilkan indiktor posisi scroll
+       */
+       const posisi = document.getElementById("posisi")
+       window.addEventListener("scroll",function(){
+            posisi.textContent = `${window.scrollY} - ${window.scrollX}`;
+       })
+
+
+       /*
+       beforeunload->ketika dokumen akan ditinggalkan,misal ketika
+                     pengguna melakukan refresh atau menutup tab
+       Event ini biasanya digunakan untuk memperingatkan pengguna 
+       sebelum meninggalkan halaman yang memiliki perubahan data
+       belum disimpan
+       */
+       window.addEventListener("beforeunload",function(event){
+            event.preventDefault();
+       })
+
+
+       /*
+       pageshow->terjadi ketika halaman ditampilkan
+       event ini juga dapat terjadi ketika halaman ditampilkan 
+       kembali dari back-forward cache(bfcache)
+       */
+       window.addEventListener("pageshow",function(event){
+        console.info("Halaman ditampilkan!");
+       })
+
+
+       /*
+       pagehide->terjadi ketika halaman akan disembunyikan atau ditinggalkan
+       */
+       window.addEventListener("pagehide",function(event){
+        console.info("Halaman akan disembunyikan")
+       })
+
+
+
+       /*
+       online->terjadi ketika browser mendeteksi bahwa koneksi
+                 jaringan tersedia kembali
+       */
+       const onlen = document.querySelector("#onlen")
+       window.addEventListener("online",function(){
+        onlen.textContent = "Koneksi internet tersedia!"
+       })
+       /*
+       offline->terjadi ketika browser mendeteksi bahwa koneksi 
+                jaringan terputus
+       */
+       const oflin = document.querySelector("#oflin")
+       window.addEventListener("offline",function(){
+         oflin.textContent = "Koneksi jaringan terputus!"
+       })
+    </script>
+</body>
+</html>

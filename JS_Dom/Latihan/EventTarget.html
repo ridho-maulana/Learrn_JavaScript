@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="submit" value="klik saya" id="klik">
+    /
+    <input type="submit" value="pencet saya" id="pencet">
+ 
+   <script>
+    //addEventListener()
+        const kliku = document.getElementById("klik");
+        kliku.addEventListener("click",function(){
+            kliku.setAttribute("value","kamu mengklik saya");
+        })
+        const pencet = document.getElementById("pencet");
+        pencet.onclick = function(){
+            pencet.setAttribute("value","Kamu memencet saya")
+        }
+
+    //removeEventListener
+        function tampilkanPesan(){
+            console.log("Tombol diklik!!!!")
+        }
+        kliku.addEventListener("click",tampilkanPesan)
+        //Menghapus event listener
+        kliku.removeEventListener("click",tampilkanPesan)
+
+    //dispatchEvent-->Memicu event click secara manual
+        // kliku.dispatchEvent(new Event("click"))
+    </script>
+</body>
+</html>

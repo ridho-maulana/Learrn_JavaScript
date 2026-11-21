@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Kata Kunci This
+         -Kata kunci this adalah referensi
+          ke object milik siapa
+         -Tiap lokasi kata kunci this,bisa
+          berbeda beda referensi pemilik nya
+         -Dalam Object Method,this merupakan
+          referensi ke ke object pemilik function
+          nya
+         -Di global scope,this merupakan referensi
+          ke global object(di browser biasanya window)
+         -Dalam function,this merupakan refernsi ke 
+          global object(di browser biasanya Window)
+         -Di function dengan strict mode(akan dibahas
+          nanti),this adalah undefined
+         -Dalam event,this merupakan referensi ke element
+          yang menerima event(dibahas di materi Document
+          Object Model)
+        */
+        const person = {
+            name : "Ica",
+            info : function(name){
+                document.writeln(`<p>halo ${name} Nama saya ${this.name}`);
+            }
+        };
+
+        document.writeln(this);
+        person.info("Rihdo");
+    </script>
+</body>
+</html>

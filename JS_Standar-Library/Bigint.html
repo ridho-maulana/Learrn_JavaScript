@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        BigInt
+        -BigInt merupakan tipe data Number yang bisa
+         mencakup data angka lebih dari Number.MAX_SAFE_INTEGER
+        -Untuk kasus number yang lebih dari itu,sangat disarankan
+         menggunakan tipe data BiigInt
+        -Cara penggunaan BigInt sama saja dengan penggunaan
+         Number dan juga operator nya
+        */
+
+        const a = BigInt(Number.MAX_SAFE_INTEGER);
+        const b = BigInt(Number.MAX_SAFE_INTEGER);
+
+        const c = a + b;
+
+        console.info(c);
+        console.info(typeof c);
+
+        const d = 10;
+        const e = 20
+        const f = d + e;
+        console.info(f);
+        console.info(typeof f);
+
+    </script>
+</body>
+</html>

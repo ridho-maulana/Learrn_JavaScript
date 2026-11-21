@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="judul">Hallo Saya Ridho Maulana C</h1>
+    <p>aku adalah seorang kapiten</p>
+    <p class="satu">Berikut keahlianku</p>
+    <ul>
+        <li>Badminton</li>
+        <li>Bekerja</li>
+        <li>Menulis</li>
+    </ul>
+
+    <script>
+        //Method
+        const satu_judul = document.querySelector("h1")
+        console.info(satu_judul)
+
+        const semua_li = document.querySelectorAll("li")
+        console.info(semua_li)
+
+        console.info(document.getElementById("judul"))
+
+        const ul = document.getElementsByTagName("p")
+        console.info(ul)
+
+        const dapat_class =  document.getElementsByClassName("satu")
+        console.info(dapat_class)
+
+        const buat = document.createElement("h1");
+        buat.textContent = "Hallo";
+        document.body.append(buat)
+
+        //Property
+        console.info(document.body)
+        console.info(document.head);
+        console.info(document.title);
+        console.info(document.documentElement)
+        console.info(document.URL)
+        document.title = "Oke";
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="submit">Klik</button>
+    <button type="submit" id="pencet">Pencet</button>
+
+    <script>
+        const tombol = document.querySelector("button")
+        const pencet = document.getElementById("pencet");
+
+        //click
+        tombol.addEventListener("click",function(){
+            tombol.textContent = "Sudah Diklik";
+        })
+        //dblclick
+        tombol.addEventListener("dblclick",function(){
+            tombol.textContent = "Tombol Diklik dua kali";
+        })
+        //mousedown-->Ketika tombol mouse ditekan
+        tombol.addEventListener("mousedown",function(){
+            tombol.textContent = "Mouse sedang ditekan!";
+        })
+        //mouseup-->ketika tombol mouse dilepaskan setelah ditekan
+        tombol.addEventListener("mouseup",function(){
+            tombol.textContent = "Mouse dilepaskan!"
+        })
+
+
+        //mousemove-->ketika pointer mouse bergerak diatas elemen
+        pencet.addEventListener("mousemove",function(){
+            pencet.textContent = "Mouse Sedang bergerak"
+        })
+        //mouseenter-->Ketika pointer mouse memasuki area suatu elemen
+        pencet.addEventListener("mouseenter",function(){
+            pencet.textContent = "Mouse memasuki area kotak!"
+        })
+        //mouseover
+        pencet.addEventListener("mouseover",function(){
+            pencet.textContent = "Mouse kotak"
+        })
+        
+        //mouseout-->ketika mouse meninggalkan elemen atau berpindah ke elemen lain
+        pencet.addEventListener("mouseout",function(){
+            pencet.textContent = "Mouse meninggalkan kotak!"
+        })
+        //mouseleave-->pointer mouse meninggalkan area suatu elemen
+        pencet.addEventListener("mouseleave",function(){
+            pencet.textContent = "Mouse meninggalkan area kotak!"
+        })
+
+
+        //contextmenu-->karena pengguna mengklik kanan mouse
+        pencet.addEventListener("contextmenu",function(){
+            pencet.textContent = "Klik kanan terdeteksi!"
+        })
+        
+        
+    </script>
+</body>
+</html>

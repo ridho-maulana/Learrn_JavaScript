@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <p class="teks">Paragraf Satu</p>
+        <p class="teks">Paragraf Dua</p>
+        <p class="teks">Paragraf Tiga</p>
+    </div>
+
+    <script>
+    //NodeList
+        const semuaParagraf = document.querySelectorAll(".teks")
+
+        //length-->Menghitung jumlah Node dalam Nodelist
+        console.info(semuaParagraf.length);
+        //[index]-->Ambil satu Element bedasarkan posisi index,dimulai dari 0
+        console.info(semuaParagraf[0])//Paragraf Satu
+        console.info(semuaParagraf[1])//Paragraf Dua
+        console.info(semuaParagraf[2])//Paragraf Tiga
+
+    
+    //Method
+        //item(index)-->Ambil Node berdasakan index
+          console.log(semuaParagraf.item(1))
+        //forEach()-->Jalankan fungsi setiap Node di dalam NodeList
+        semuaParagraf.forEach(function(Paragraf){
+            console.info(Paragraf.textContent)
+        })
+        //entries()-->Hasilkan pasangan index dan Node
+        for (const [inde,Paragraf] of semuaParagraf.entries()){
+            console.log(inde,Paragraf.textContent);
+        }
+        //keys()-->Hasilkan index setiap Node
+        for (const index of semuaParagraf.keys()){
+            console.log(index)
+        }
+        //values()-->Hasilkan setiap Node dalam Nodelist
+        for (const Paragraf of semuaParagraf.values()) {
+            console.info(Paragraf.textContent);
+        }
+             
+    </script>
+</body>
+</html>

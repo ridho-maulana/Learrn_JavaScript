@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="menu1">
+        <li id="first">Satu</li>
+        <li id="second">Dua</li>
+        <li id="third">Tiga</li>
+    </ul>
+
+    <ul id="menu2">
+        <li>Eko</li>
+        <li>Kurniawan</li>
+        <li>Khannedy</li>
+    </ul>
+
+    <script>
+        /*
+        NodeList
+        -NodeList adalah kumpulan dari Node
+        -Biasanya NodeList digunakan ketika kita meyeleksi
+         banyak Node sekaligus,misal ketika kita ingin ambil
+         semua children di Node misalnya
+        -https://developer.mozilla.org/en-US/docs/Web/API/NodeList
+        */
+
+        const list = document.querySelectorAll("li")
+        console.info(list)
+
+        const menu1 = document.getElementById("menu1").childNodes;
+        console.info(menu1);
+
+        const menu2 = document.getElementById("menu2").childNodes
+        console.info(menu2)
+
+        /*
+        Live vs Static NodeList
+         -NodeList memiliki 2 tipe,yaitu Live dan Static
+         -Live artinya perubahan yang terjadi pada NodeList nya,
+          akan merubah semua NodeList yang sama
+         -Static artinya perubahan yang terjadi pada NodeList nya,
+          tidak akan merubah semua NodeList yang sama
+         -Saat kita menggunakan elemet.childNodes, Nodelist tersebut
+          bersifat live
+         -Saat kita menggunakan document.querySelectorAll(),
+          NodeList tersebut bersifat Static 
+        */
+
+        //NodeList Live
+        const Menu1 = document.getElementById("menu1");
+        const list1 = Menu1.childNodes;
+
+        Menu1.appendChild(document.createElement("li"));
+        Menu1.append(document.createElement("li"));
+
+        console.info(list1)
+
+        //NodeList Static
+        const list2 = document.querySelectorAll("li");
+        const Menu2 = document.getElementById("menu1");
+        Menu2.append(document.createElement("li"));
+        Menu2.append(document.createElement("li"))
+
+        console.info(list2)
+
+        const list3 = document.querySelectorAll("li")
+        console.info(list3)
+
+    </script>
+</body>
+</html>

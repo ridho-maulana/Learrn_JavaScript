@@ -1,0 +1,26 @@
+Method pada Document yang penting
+ 1.querySelector()
+    Mencari 1 Element pertama
+    contoh:
+        document.querySelector(".menu")
+ 2.querySelectorAll()
+    Mencari semua Element yang cocok
+    contoh:
+        document.querySelectorAll(".menu")
+ 3.getElementById()
+    Mencari element berdasarkan id
+    contoh:
+        document.getElementById("judul")
+ 4.getElementsByClassName()
+    Mencari element berdasarkan class
+    contoh:
+        document.getElementsByClassName("menu")
+ 5.getElementByTagName()
+    Mencari elemen berdasarkan nama tag 
+    contoh:
+        document.getElementByTagName("p")
+ 6.createElement()
+    Membuat Element baru
+    contoh:
+        document.createElement("p")
+    

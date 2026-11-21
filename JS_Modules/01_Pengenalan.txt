@@ -1,0 +1,35 @@
+Latar Belakang
+ -Dahulu kode program JS biasanya dimulai
+  dari kode yang kecil dan sedikit disetiap
+  halaman,jadi jarang sekali kita akan menggunakan
+  kode JS dengan ukuran besar dalam satu halaman web
+ -Namim saat ini,kebutuhan web sudah berbeda,semenjak
+  makin populernya framework-framework JS untuk membuat
+  FrontEnd,kebutuhan pembuatan kode JS semakin kompleks
+  dan besar
+ -Oleh karena itu,sudah seharusnya saat ini,saat
+  membuat kode JS,kita perlu melakukan mekanisme memotong-
+  motong kode JS,sehingga tidak perlu kompleks dan banyak 
+  dalam satu file JS
+
+JavaScript Modules
+ -JS Modules merupakan fitur dimana kita bisa membuat
+  module(kode JS yang bisa digunakan ulang) untuk kode
+  JS lain 
+ -JS Modules diawali pada teknologi bernama NodeJS,
+  selanjutnya banyak library yang mengadopsi penggunaan
+  JS Modules di NodeJS agar bisa berjalan di Web Browser,
+  seperti library CommonJS,AMD,RequireJS,DLL
+ -Namun untungnya,saat ini Browser modern sudah banyak
+  mendukung JS Modules,kecuali jika  masih menggunakan internet
+  Explorer
+
+
+Import dan Export
+ -Secara garis besar,ada dua kata kunci yang digunakan dalam
+  JS Modules,yaitu import dan Export
+ -Import merupakan kata kunci yang digunakan untuk mengambil
+  sesuatu dari module lain
+ -Sedangkan export merupakan kata kunci yang digunakan untuk
+  memberitahu module lain,bagian mana yang ingin kita ekpose
+  keluar,sehingga bisa d import oleh module lain

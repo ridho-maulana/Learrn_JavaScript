@@ -1,0 +1,6 @@
+Property NodeList
+ -length
+  Menghitung jumlah Node dalam NodeList
+ -[index]
+  Mengakses Node berdasarkan index,dimulai
+  dari 0.contoh [0],[1],[2]

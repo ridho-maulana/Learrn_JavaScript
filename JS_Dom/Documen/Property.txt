@@ -1,0 +1,12 @@
+Property pada Document
+ 1.document.title
+    Mengambil/mengubah <title>
+ 2.document.body
+    Mengambil Element <body>
+ 3.document.head
+    Mengambil Element <head>
+ 4.document.documentElement
+    Mengambil Element <html>
+ 5.document.URL
+    Mendapatkan URL halaman
+    

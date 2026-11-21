@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form  id="formMahasiswa" name="formData" method="post">
+        <input type="text" name="nama" placeholder="Nama">
+        <input type="email" name="email" placeholder="Email">
+        <button type="submit">Kirim</button>
+        <button type="reset">Reset</button>
+    </form>
+
+    <p id="hasil"></p>
+
+    <script >
+        const form = document.forms['formData'];
+        const hasil = document.getElementById("hasil"); 
+        /*
+        Digunakan untuk kirim form secara langsung tanpa 
+        memicu evnet submit
+        */
+        // form.submit();
+
+        /*
+        Digunakan untuk kirim form melalui mekanisme submit normal
+        Perbedaan dengan submit:
+            -requestSubmit() menjalankan validasi bawaan
+            -requestSubmit() memicu event submit
+            -submit() melewati kedua proses tersebut
+        */
+        form.addEventListener("submit",function(event){
+            event.preventDefault();
+            hasil.textContent = "Form berhasil dikirim!";
+        });
+        // form.requestSubmit();
+
+        /*
+        Digunakan untuk meriksa apakah seluruh kontrol form 
+        memenuhi aturan validasi HTML
+        Hasilnya:
+            true  = semua kontrol form valid
+            false = terdapat kontrol form yang tidak valid
+        */
+       const hasilku = form.checkValidity();
+       if(hasilku){
+            hasil.textContent = "Semua input valid!";
+       }else{
+            hasil.textContent = "Masih ada input yang salah!";
+       }
+    </script>
+</body>
+</html>

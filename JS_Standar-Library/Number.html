@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const input = "12345";
+        const number = Number(input);
+
+        document.writeln(typeof input)
+        document.writeln(typeof number)
+        document.writeln(number)
+        document.writeln(Number("salah")+"<br><br><br>");
+
+        /*
+        Number Static Properties
+         -Number memiliki banyak static properties,seperti:
+         -Number.MIN_VALUE untuk mendapat number minimal
+         -Number.MAX_VALUE untuk mendapat number maksimal
+        */
+
+        document.writeln(Number.MIN_VALUE+"<br>");
+        document.writeln(Number.MAX_VALUE+"<br>");
+        document.writeln(Number.MIN_SAFE_INTEGER+"<br>");
+        document.writeln(Number.MAX_SAFE_INTEGER+"<br>");
+        document.writeln(Number.NaN);
+
+        const data = Number("Eko");
+        console.info(Number.isInteger(data));
+        console.info(Number.isNaN(data));
+
+        /*
+        Number Instance Method
+         -Number memiliki banyak instance method seperti
+         -Number.toLocalString(locale) untuk mengubah number
+          menjadi string sesuai locale:
+         -Number.toString(radix) untuk mengubah number menjadi
+          string sesuai radix
+        */
+       const value = Number(12345);
+       console.info(value.toString(2));
+    console.info(value.toLocaleString("id-ID"));
+
+    </script>
+</body>
+</html>

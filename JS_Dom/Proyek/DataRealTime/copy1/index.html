@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Cari Kontak / Nama</h2>
+        <input type="text" id="searchInput" placeholder="Ketik nama yang dicari...">
+
+        <ul  id="daftarItem">
+            <li>Ridho Maulana</li>
+            <li>Budi Santoso</li>
+            <li>Siti Aminah</li>
+            <li>Joko Widodo</li>
+            <li>Dewi Lestari</li>
+            <li>Ahmad Dhani</li>
+        </ul>
+    </div>
+
+    <script>
+        const searchInput = document.getElementById("searchInput");
+        const items = document.querySelectorAll("#daftarItem li");
+
+        searchInput.addEventListener("input",function(event){
+            // Ambil nilai yang diketik user dan ubah ke huruf kecil
+            const keyword = event.target.value.toLowerCase();
+
+            //periksa setiap item <li> satu per satui
+            items.forEach(function(item){
+                //Ambil teks dari li dan ubah ke huruf kecil juga
+                const textItem = item.textContent.toLowerCase();
+
+                //cek apakh teks item mengandung kata yang diketik user
+                if(textItem.includes(keyword)){//cek apakah teks mengandung huruf/kata yang diketik
+                    //jika cocok, tampilkan(kembalikan ke display default)
+                    item.style.display = "block"; //elemen ditampilkan(block)
+                }else{
+                    //jika tidak cocok,sembunyikan
+                    item.style.display = "none";//elemen disembunyikan(none)
+                }
+            })
+        })
+    </script>
+</body>
+</html>

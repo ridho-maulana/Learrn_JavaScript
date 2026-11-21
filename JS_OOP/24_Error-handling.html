@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Error Handling
+
+        Kata Kunci Finally
+         -Kadang kita ingin melakukan sesuatu entah itu
+          terjadi error ataupun tidak
+         -Dalam try catch,kita bisa menambahkan block finally
+         -Block finally ini akan selalu dieksekusi setelah try
+          catch selesai,entah terjadi error atau tidak,block
+          finally akan selalu dieksekusi
+
+        Try Finally
+         -Kata kunci finally juga-bisa digunakan tanpa perlu
+          menggunakan catch
+         -Biasanya ini digunakan dalam kasus tertentu
+        */
+
+        class Math{
+            static say(...number){
+                if(number.length === 0){
+                    throw new Error("Harus lebih dari 0");
+                }
+
+                let total = 0;
+                for (const oke of number) {
+                    total += oke
+                }
+
+                return total;
+            }
+        }
+
+        try{
+            document.writeln(Math.say(101));
+            document.writeln("Ridho")
+        }catch(error){
+            console.info(`Terjadi Error ${error.message}`);
+        }finally{
+            document.writeln("<p>Program seelsai")
+        }
+
+        document.writeln(Math.say(111,1,1,1,11,1,1,1,1,1,1,1,1,1))
+
+
+
+        class Counter{
+            constructor(){
+                this.value = 1
+            };
+
+            next(){
+                try{
+                    return "<p>" + this.value;
+                }finally{
+                    this.value++;
+                }
+            }
+        }
+
+        const Ridho = new Counter();
+        Ridho.next();
+        Ridho.next();
+
+        document.writeln(Ridho.next())
+        document.writeln(Ridho.next())
+        document.writeln(Ridho.next())
+        document.writeln(Ridho.next())
+        document.writeln(Ridho.next())
+        document.writeln(Ridho.next())
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <input type="text" class="form-input" id="nama">
+    </div>
+
+    <script>
+        const input = document.querySelector("#nama")
+        const semuaAtribut = input.attributes;
+    //Atribut
+        //length
+        console.info(semuaAtribut.length)
+        //[index]
+        console.info(semuaAtribut[0].name);//id
+        console.info(semuaAtribut[1].name);//type
+        console.info(semuaAtribut[2].name);//class
+    
+    //Method
+        //getNamedItem(name)-->Ambil atribut berdasarkan nama
+        console.log(semuaAtribut.getNamedItem("id").value)
+        //getNamedItemNS(namespace,localName)-->Ambil atribut berdasarkan namespace dan nama lokalnya
+        console.log(
+             semuaAtribut.getNamedItemNS(null,"id").value
+        );
+        //item(index)-->Ambil objek Attr berdasarkan index
+        console.log(semuaAtribut.item(1).name)
+        //removeNamedItem(name)-->Hapus atribut berdasarkan nama
+        semuaAtribut.removeNamedItem("class");
+        //removeNamedItemNS(namespace,localName)-->Hapus atribut berdasarkan namespace dan nama lokalnya
+        semuaAtribut.removeNamedItemNS(null,"type");
+        //setNamedItem(attr)-->Tambah atau ganti atribut gunakan objek Attr
+        const atributBaru = document.createAttribute("placeholder");
+        atributBaru.value = "Masukkan nama";
+
+        semuaAtribut.setNamedItem(atributBaru);
+
+           
+    </script>
+</body>
+</html>

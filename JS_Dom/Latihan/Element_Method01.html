@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h1 id="judul">Tetang Saya</h1>
+        <p class="isiku" id="isi">
+            Hallo semua nama saya Ridho Maulana C
+        </p>
+        <p>OkeGas</p>
+
+        <ul id="table">
+            <li>Ridho</li>
+            <li>Natasya</li>
+            <li>Mamah</li>
+            <li>Ayah</li>
+        </ul>
+
+        <button id="tombol">Klik</button>
+    </div>
+
+    <script>
+        //querySelector
+        const container = document.querySelector("#container")
+        const hasil = container.querySelector("#judul")
+        console.info(hasil.textContent)
+        console.info(container)
+         
+        //querySelectorAll
+        const result = container.querySelectorAll("p");
+        console.info(result)
+
+        //setAttribute
+        const tabel = container.querySelector("ul")
+        const tambah = tabel.setAttribute("class","diriku")
+
+        //getAttribute
+        const p = container.querySelector("p")
+        const dapatp =  p.getAttribute("id")
+        console.info(dapatp)
+
+        //removeAttribute
+        const hapus = p.removeAttribute("class")
+
+        //remove
+        const hapusem = p.remove();
+
+        //append
+        const tambahp = document.createElement("h1")
+        tambahp.textContent = "OkeGais"
+        const hasilk = container.append(tambahp)
+
+        //prepen
+        const tambahdepan = document.createElement("p")
+        tambahdepan.textContent = "diriku selama lamanya"
+        container.prepend(tambahdepan)
+
+        //add
+        const tombol = document.querySelector("#tombol")
+        tombol.addEventListener("click",function(){
+            tombol.textContent = "Sudah diklik";
+        })
+    </script>
+</body>
+</html>

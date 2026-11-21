@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let anggota = {
+            Mamah : "Ibu Sari Dewi",
+            Ayah : "Bapak Doni C",
+            Anak1 : "Ridho Maulana C"
+        };
+
+        document.writeln(`<p>${anggota.Mamah}`)
+        document.writeln(`<p>${anggota.Ayah}`)
+        document.writeln(`<p>${anggota.Anak1}`)
+
+        with(anggota){
+            document.writeln(Mamah);
+            document.writeln(Ayah);
+            document.writeln(Mamah);
+        }
+    </script>
+</body>
+</html>

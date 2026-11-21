@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        With Statement
+         -With statement merupakan fitur yang digunakan
+          untuk menurunkan sebuah scope data
+         -Dengan menggunakan with statement,kita bisa
+          mengakses proeprty dalam sebuah data tanpa 
+          harus menyebut datanya
+        */
+
+        //Tanpa With Statement
+            const person = {
+                firstName : "Ridho",
+                middleName : "Maulana",
+                lastName : "Candra"
+            };
+            document.writeln(person.firstName)
+            document.writeln(person.middleName)
+            document.writeln(person.lastName)
+            
+        //Dengan With Statement
+            with(person){
+                document.writeln(firstName);
+                document.writeln(middleName);
+                document.writeln(lastName);
+            }
+    </script>
+</body>
+</html>

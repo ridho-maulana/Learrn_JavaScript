@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+     Node
+        -Node adalah base class dari document,Element dan Attr
+        -Artinya semua fitur yang dimiliki di Node dimiliki
+         diturunannya
+        -Node dalam DOM itu bentuknya adalah Tree(pohon),
+         artinya dengan Node,kita bisa melihat Parent(node diatas nya),
+         Chldren(node dibawahnya),Sibling(node disebelahnya)
+        -https://developer.mozilla.org/en-US/docs/Web/API/Node
+
+     Node Property
+        -Node memiliki banyak sekali property
+        -Property di Node banyak berisi informasi reference
+         ke Node lan nya,seperti ke node parent nya,node
+         children nya atau node sebelahnya 
+        -https://developer.mozilla.org/en-US/docs/Web/API/Node#properties
+    
+     Node Method
+        -Node memiliki banyak sekali method
+        -Method di Node bisa digunakan untuk memanipulasi
+         data di Node di dalam Node tersebut,misal menambah/
+         menghapus Node children 
+        -https://developer.mozilla.org/en-US/docs/Web/API/Node#properties
+    -->
+
+        <ul id="menu">
+            <li id="first">First</li><li id="second">Seconder</li><li id="third">Third</li>
+        </ul>
+    <script>
+        const menu = document.getElementById("menu");
+        console.info(menu);
+        console.info(menu.childNodes)
+        console.info(menu.textContent);
+
+        const second = document.getElementById("second")
+        console.info(second);
+        console.info(second.textContent);
+        console.info(second.previousSibling);
+        console.info(second.nextSibling);
+    </script>
+</body>
+</html>

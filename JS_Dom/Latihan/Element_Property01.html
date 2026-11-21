@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="" id="container">
+        <h1 id="judul" class="judul">
+            Tentang Saya
+        </h1>
+        <p class="identiti" id="identitas">
+            Nama Saya Ridho Maulana C,saya tinggal di bandung
+        </p>
+        <p>Hobie Saya:</p>
+        <ul id="table">
+            <li>Badminton</li>
+            <li>Ngoding</li>
+            <li>Memasak</li>
+            <li>Main Game</li>
+        </ul>
+        <input type="text" id="isi" class="isi" value="Ridho Maulana C">
+                <input type="checkbox" id="chek">
+        <button id="tombol" type="submit">Kirim</button>
+    </div>
+
+    <script>
+        //deklarasi Container
+        const container = document.querySelector("#container")
+        console.info(container)
+
+        //textcontent
+        const isi = document.querySelector("#identitas")
+        isi.textContent = "<p>dan saat ini</p>";
+
+        //innerHTML 
+        const judul = document.querySelector("#judul");
+        judul.innerHTML = "<h3>About Me</h3>"
+
+        //id
+        console.info(judul.id)
+        judul.id = "judol";
+        //className
+        const tabel = document.querySelector("#table")
+        console.info(tabel.className)
+        tabel.className = "tabelOY"
+        console.info(tabel.className)
+        //classList
+        const pendek = container.querySelector("#identitas")
+        pendek.classList.add("OKe")
+        pendek.classList.remove("identiti")
+
+        //style
+        const ul = container.querySelector("ul");
+        const li = ul.querySelectorAll("li");
+        console.info(li) 
+        li[0,1].style.background = "blue"
+
+        //value
+        const isia = container.querySelector("#isi")
+        isia.value = "OKKEGAIS"
+        //disabled
+        console.info(isia.disabled)
+        isia.disabled = true; 
+        //checked
+        const chek = container.querySelector("#chek");
+        chek.checked = true;
+    </script>
+</body>
+</html>

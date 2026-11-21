@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Math{
+            static sum(...number){
+                if(number.length === 0){
+                    throw new Error("Angka harus lebih dari 0")
+                }
+
+                let total = 0;
+                for (const oke of number) {
+                    total += oke;
+                }
+
+                return total;
+            }
+        }
+        document.writeln(Math.sum(1,1,1,1,1,1))
+                document.writeln(Math.sum())
+
+    </script>
+</body>
+</html>

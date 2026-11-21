@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>My To Do List</h1>
+
+        <form id="formKegiatan">
+            <input type="text" id="kegiatan" placeholder="Masukkan Kegiatan">
+            <button type="submit">Tambah</button>
+        </form>
+
+        <h3>Daftar Kegiatan</h3>
+
+        <form id="formUpdate" style="display:flex; justify-content: space-between;">
+        </form>
+
+        <ul class="daftarTugas">
+
+        </ul>
+
+        <p>Jumlah Tugas: <span class="jumlah">0</span></p>
+
+        <div id="perbarui"></div>
+    </div>
+
+    <script>
+        const formKegiatan = document.getElementById("formKegiatan");
+        const kegiatan = document.getElementById("kegiatan");
+        const daftarTugas = document.querySelector(".daftarTugas");
+
+        formKegiatan.addEventListener("submit",function(event){
+            event.preventDefault();
+
+            const li = document.createElement("li");
+            const div = document.createElement("div");
+            const update = document.createElement("button");
+            update.textContent = "Update";
+            const hapus = document.createElement("button");
+            hapus.textContent = "Hapus";
+            div.append(update);
+            div.append(hapus)
+
+            if(kegiatan.value.trim() === ""){
+                return;
+            }
+
+            const teks = document.createElement("span");
+            teks.textContent = kegiatan.value;
+            li.append(teks);
+            li.append(div);
+            daftarTugas.append(li);
+
+
+            update.addEventListener("click",function(){
+                const formUpdate = document.querySelector("#formUpdate");
+                const masukTeks = document.createElement("input");
+                masukTeks.setAttribute = ("type","text");
+                const konfir = document.createElement("button");
+                konfir.textContent = "Konfirmasi"
+                formUpdate.append(masukTeks);
+                formUpdate.append(konfir);
+                
+
+                konfir.addEventListener("click",function(event){
+                    event.preventDefault();
+                    formUpdate.innerHTML = "";
+                    if(masukTeks.value.trim() === ""){
+                        return;
+                    }
+
+                    teks.textContent = masukTeks.value;
+                })
+            })
+
+            hapus.addEventListener("click",function(){
+                const yakin = confirm("Apakah Yakin?")
+                if(yakin){
+                    li.remove();
+            jumlah.textContent = daftarTugas.children.length;
+                }
+
+            })
+
+            const jumlah = document.querySelector(".jumlah");
+            jumlah.textContent = daftarTugas.children.length;
+
+            formKegiatan.reset();
+        })
+    </script>
+</body>
+</html>
